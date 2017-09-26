@@ -107,6 +107,11 @@
          title_series_t^10
          isbn_t
          text
+         place_unstem_search^100000
+         place_t^25000
+         place_addl_unstem_search^250
+         place_addl_t^50
+        
        </str>
        <str name="pf">
          title_unstem_search^1000000
@@ -130,6 +135,8 @@
          title_series_unstem_search^250
          title_series_t^100
          text^10
+         place_unstem_search^100000
+         place_t^25000
        </str>
        <str name="author_qf">
          author_unstem_search^200
@@ -167,7 +174,21 @@
          title_series_t^50
          title_series_unstem_search^10
        </str>
-       <str name="subject_qf">
+       <str name="place_qf">
+         place_unstem_search^50000
+         subplace_unstem_search^25000
+         place_addl_unstem_search^10000
+         place_t^5000
+         
+       </str>
+       <str name="place_pf">
+         place_unstem_search^500000
+         subplace_unstem_search^250000
+         place_addl_unstem_search^100000
+         place_t^50000
+         
+       </str>
+       <!--<str name="subject_qf">
          subject_topic_unstem_search^200
          subject_unstem_search^125
          subject_topic_facet^100
@@ -182,7 +203,7 @@
          subject_topic_facet^500
          subject_addl_unstem_search^100
          subject_addl_t^10
-       </str>
+       </str>-->
        
        <int name="ps">3</int>
        <float name="tie">0.01</float>
@@ -190,31 +211,14 @@
        <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">
          id, 
-         score,
-         author_display,
-         author_vern_display, 
-         format, 
-         isbn_t, 
-         language_facet, 
-         lc_callnum_display,
-         material_type_display, 
-         published_display,
-         published_vern_display,
-         pub_date,
-         title_display,
-         title_vern_display,
-         subject_topic_facet,
-         subject_geo_facet,
-         subject_era_facet,
-         subtitle_display,
-         subtitle_vern_display,
-         url_fulltext_display,
-         url_suppl_display,
+         author_t,
+         title_t,
+         place_t,
        </str>
 
        <str name="facet">true</str>
        <str name="facet.mincount">1</str>
-       <str name="facet.field">format</str>
+       <!--<str name="facet.field">format</str>
        <str name="facet.field">lc_1letter_facet</str>
        <str name="facet.field">lc_alpha_facet</str>
        <str name="facet.field">lc_b4cutter_facet</str>
@@ -222,7 +226,11 @@
        <str name="facet.field">pub_date</str>
        <str name="facet.field">subject_era_facet</str>
        <str name="facet.field">subject_geo_facet</str>
-       <str name="facet.field">subject_topic_facet</str>
+       <str name="facet.field">subject_topic_facet</str>-->
+       <str name="facet.field">keyword</str>
+       <str name="facet.field">people</str>
+       <str name="facet.field">place</str>
+       <str name="facet.field">ethnic_group</str>
        
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
@@ -342,6 +350,13 @@
       <str name="name">title</str>
       <str name="field">title_spell</str>
       <str name="spellcheckIndexDir">./spell_title</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">place</str>
+      <str name="field">place_spell</str>
+      <str name="spellcheckIndexDir">./place_title</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>
