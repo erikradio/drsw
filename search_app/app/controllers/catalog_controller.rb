@@ -102,7 +102,10 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_t', label: 'Title'
+    config.add_index_field 'date_t', label: 'Date'
     config.add_index_field 'author_t', label: 'Author'
+    config.add_index_field 'precis_t', label: 'Precis'
+    config.add_index_field 'id_t', label: 'Serial Number'
     config.add_index_field 'place_t', label: 'Place'
 
 
@@ -137,23 +140,24 @@ class CatalogController < ApplicationController
     # config.add_show_field 'isbn_t', label: 'ISBN'
     config.add_show_field 'title_display', label: 'Title'
     config.add_show_field 'author', label: 'Author'
-
-    config.add_show_field 'original_location', label: 'Original Location'
-    config.add_show_field 'first_location', label: 'First Location'
-    config.add_show_field 'other_location', label: 'Other Location'
-
-    config.add_show_field 'location', label: 'Location'
+    config.add_show_field 'date', label: 'Date'
+    config.add_show_field 'language', label: 'Language'
+    config.add_show_field 'id', label: 'Serial Number'
+    config.add_show_field 'documentation', label: 'Documentation'
+    config.add_show_field 'precis', label: 'Precis'
+    config.add_show_field 'people', label: 'People'
     config.add_show_field 'place', label: 'Place'
     config.add_show_field 'ethnic_group', label: 'Ethnic Group'
-    config.add_show_field 'precis', label: 'Precis'
+    config.add_show_field 'first_location', label: 'First Location'
+    config.add_show_field 'original_location', label: 'Original Location'
+    config.add_show_field 'other_location', label: 'Other Location'
+    config.add_show_field 'keyword', label: 'Keyword'
+
+
+    config.add_show_field 'location', label: 'Location'
     config.add_show_field 'note', label: 'Note'
     config.add_show_field 'source', label: 'Source'
 
-    config.add_show_field 'keyword', label: 'Keyword'
-    config.add_show_field 'people', label: 'People'
-    config.add_show_field 'language', label: 'Language'
-    config.add_show_field 'date', label: 'Date'
-    config.add_show_field 'documentation', label: 'Documentation'
     config.add_show_field 'military_group', label: 'Military Group'
 
 
