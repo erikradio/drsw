@@ -141,26 +141,26 @@ class CatalogController < ApplicationController
     # config.add_show_field 'lc_callnum_display', label: 'Call number'
     # config.add_show_field 'isbn_t', label: 'ISBN'
     config.add_show_field 'title_display', label: 'Title'
-    config.add_show_field 'author', label: 'Author'
-    config.add_show_field 'date', label: 'Date'
-    config.add_show_field 'language', label: 'Language'
-    config.add_show_field 'id', label: 'Serial Number'
-    config.add_show_field 'documentation', label: 'Documentation'
-    config.add_show_field 'precis', label: 'Precis'
-    config.add_show_field 'people', label: 'People'
-    config.add_show_field 'place', label: 'Place'
-    config.add_show_field 'ethnic_group', label: 'Ethnic Group'
-    config.add_show_field 'first_location', label: 'First Location'
-    config.add_show_field 'original_location', label: 'Original Location'
-    config.add_show_field 'other_location', label: 'Other Location'
-    config.add_show_field 'keyword', label: 'Keyword'
+    config.add_show_field 'author_t', label: 'Author'
+    config.add_show_field 'date_t', label: 'Date'
+    config.add_show_field 'language_t', label: 'Language'
+    config.add_show_field 'id_t', label: 'Serial Number'
+    config.add_show_field 'documentation_t', label: 'Documentation'
+    config.add_show_field 'precis_t', label: 'Precis'
+    config.add_show_field 'people_t', label: 'People'
+    config.add_show_field 'place_t', label: 'Place'
+    config.add_show_field 'ethnic_group_t', label: 'Ethnic Group'
+    config.add_show_field 'first_location_t', label: 'First Location'
+    config.add_show_field 'original_location_t', label: 'Original Location'
+    config.add_show_field 'other_location_t', label: 'Other Location'
+    config.add_show_field 'keyword_t', label: 'Keyword'
 
 
-    config.add_show_field 'location', label: 'Location'
-    config.add_show_field 'note', label: 'Note'
-    config.add_show_field 'source', label: 'Source'
+    config.add_show_field 'location_t', label: 'Location'
+    config.add_show_field 'note_t', label: 'Note'
+    config.add_show_field 'source_t', label: 'Source'
 
-    config.add_show_field 'military_group', label: 'Military Group'
+    config.add_show_field 'military_group_t', label: 'Military Group'
 
 
     # "fielded" search configuration. Used by pulldown among other places.
@@ -320,13 +320,13 @@ end
       }
     end
 
-    # config.add_search_field('') do |field|
-    #
-    #   field.solr_local_parameters = {
-    #     qf: '$source_qf',
-    #     pf: '$source_pf'
-    #   }
-    # end
+    config.add_search_field('id') do |field|
+
+      field.solr_local_parameters = {
+        qf: '$id_qf',
+        pf: '$id_pf'
+      }
+    end
 
 
 
