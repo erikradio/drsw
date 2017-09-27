@@ -78,13 +78,13 @@ class CatalogController < ApplicationController
     # config.add_facet_field 'lc_1letter_facet', label: 'Call Number'
     # config.add_facet_field 'subject_geo_facet', label: 'Region'
     # config.add_facet_field 'subject_era_facet', label: 'Era'
-    config.add_facet_field 'keyword', label: 'Keyword'
+    config.add_facet_field 'keyword_facet', label: 'Keyword'
 
-    config.add_facet_field 'place', label: 'Place'
+    config.add_facet_field 'place_facet', label: 'Place'
 
-    config.add_facet_field 'people', label: 'People'
+    config.add_facet_field 'people_facet', label: 'People'
     # config.add_facet_field 'author', label: 'Author'
-    config.add_facet_field 'ethnic_group', label: 'Ethnic Group'
+    config.add_facet_field 'ethnic_group_facet', label: 'Ethnic Group'
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', :pivot => ['format', 'language_facet']
 
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
@@ -107,6 +107,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'precis_t', label: 'Precis'
     config.add_index_field 'id_t', label: 'Serial Number'
     config.add_index_field 'place_t', label: 'Place'
+    # config.add_index_field 'original_location_t', label: 'Original Location'
+
 
 
 
@@ -208,13 +210,125 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('place') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'place' }
+    config.add_search_field('date') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'date' }
       field.solr_local_parameters = {
-        qf: '$place_qf',
-        pf: '$place_pf'
+        qf: '$date_qf',
+        pf: '$date_pf'
       }
     end
+
+    config.add_search_field('documentation') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'documentation' }
+      field.solr_local_parameters = {
+        qf: '$documentation_qf',
+        pf: '$documentation_pf'
+      }
+    end
+
+
+
+
+
+    config.add_search_field('original_location') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'original_location' }
+      field.solr_local_parameters = {
+        qf: '$original_location_qf',
+        pf: '$original_location_pf'
+      }
+    end
+
+    config.add_search_field('location') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'location' }
+      field.solr_local_parameters = {
+        qf: '$location_qf',
+        pf: '$location_pf'
+      }
+    end
+
+    config.add_search_field('first_location') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'first_location' }
+      field.solr_local_parameters = {
+        qf: '$first_location_qf',
+        pf: '$first_location_pf'
+      }
+    end
+
+    config.add_search_field('other_location') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'other_location' }
+      field.solr_local_parameters = {
+        qf: '$other_location_qf',
+        pf: '$other_location_pf'
+      }
+    end
+
+    config.add_search_field('ethnic_group') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'ethnic_group' }
+      field.solr_local_parameters = {
+        qf: '$ethnic_group_qf',
+        pf: '$ethnic_group_pf'
+      }
+    end
+
+    config.add_search_field('keyword') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'keyword' }
+      field.solr_local_parameters = {
+        qf: '$keyword_qf',
+        pf: '$keyword_pf'
+      }
+    end
+
+    config.add_search_field('language') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'language' }
+      field.solr_local_parameters = {
+        qf: '$language_qf',
+        pf: '$language_pf'
+      }
+  end
+
+  config.add_search_field('military_group') do |field|
+    field.solr_parameters = { :'spellcheck.dictionary' => 'military_group' }
+    field.solr_local_parameters = {
+      qf: '$military_group_qf',
+      pf: '$military_group_pf'
+    }
+end
+
+    config.add_search_field('people') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'people' }
+      field.solr_local_parameters = {
+        qf: '$people_qf',
+        pf: '$people_pf'
+      }
+    end
+
+      config.add_search_field('place') do |field|
+        field.solr_parameters = { :'spellcheck.dictionary' => 'place' }
+        field.solr_local_parameters = {
+          qf: '$place_qf',
+          pf: '$place_pf'
+        }
+      end
+
+
+
+    config.add_search_field('source') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'source' }
+      field.solr_local_parameters = {
+        qf: '$source_qf',
+        pf: '$source_pf'
+      }
+    end
+
+    # config.add_search_field('') do |field|
+    #
+    #   field.solr_local_parameters = {
+    #     qf: '$source_qf',
+    #     pf: '$source_pf'
+    #   }
+    # end
+
+
 
     # Specifying a :qt only to show it's possible, and so our internal automated
     # tests can test it. In this case it's the same as

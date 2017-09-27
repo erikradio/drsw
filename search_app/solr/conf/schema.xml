@@ -585,7 +585,18 @@
    <copyField source="subject_addl_t" dest="subject_addl_unstem_search"/>
    <copyField source="subject_topic_facet" dest="subject_topic_unstem_search"/>
   <copyField source="place_t" dest="place_unstem_search"/>
-   
+  <copyField source="original_location_t" dest="original_location_unstem_search"/>
+  <copyField source="location_t" dest="location_unstem_search"/>
+  <copyField source="first_location_t" dest="location_unstem_search"/>
+  <copyField source="ethnic_group_t" dest="ethnic_group_unstem_search"/>
+  <copyField source="source_t" dest="source_unstem_search"/>
+  <copyField source="keyword_t" dest="keyword_unstem_search"/>
+  <copyField source="people_t" dest="people_unstem_search"/>
+  <copyField source="language_t" dest="language_unstem_search"/>
+  <copyField source="date_t" dest="date_unstem_search"/>
+  <copyField source="other_location_t" dest="other_location_unstem_search"/>
+  <copyField source="documentation_t" dest="documentation_unstem_search"/>
+  <copyField source="military_group_t" dest="military_group_unstem_search"/>
    <!-- sort fields 
    <copyField source="pub_date" dest="pub_date_sort"/>-->
    
@@ -612,7 +623,40 @@
   <copyField source="place_facet" dest="place_spell"/>
   <copyField source="place_t" dest="place_spell"/>
   <copyField source="place_addl_t" dest="place_spell"/>  
-   
+  <!-- original location spell check; should match fields for place request handler -->
+  <copyField source="original_location_t" dest="original_location_spell"/>
+  <copyField source="original_location_addl_t" dest="original_location_spell"/>  
+  <!-- location spell check; should match fields for place request handler -->
+  <copyField source="location_t" dest="location_spell"/>
+  <copyField source="location_addl_t" dest="location_spell"/>
+  <!-- ethnic group spell check; should match fields for place request handler -->
+  <copyField source="ethnic_group_t" dest="ethnic_group_spell"/>
+  <copyField source="ethnic_group_addl_t" dest="ethnic_group_spell"/>  
+  <!-- source spell check; should match fields for place request handler -->
+  <copyField source="source_t" dest="source_spell"/>
+  <copyField source="source_addl_t" dest="source_spell"/>  
+  <!-- first location spell check; should match fields for place request handler -->
+  <copyField source="first_location_t" dest="first_location_spell"/>
+  <copyField source="first_location_addl_t" dest="first_location_spell"/>  
+  <!-- keyword spell check; should match fields for place request handler -->
+  <copyField source="keyword_t" dest="keyword_spell"/>
+  <copyField source="keyword_addl_t" dest="keyword_spell"/>  
+  <!-- people spell check; should match fields for place request handler -->
+  <copyField source="people_t" dest="people_spell"/>
+  <copyField source="people_addl_t" dest="people_spell"/>
+  <!-- language spell check; should match fields for place request handler -->
+  <copyField source="language_t" dest="language_spell"/>
+  <copyField source="language_addl_t" dest="language_spell"/> 
+  <!-- other location spell check; should match fields for place request handler -->
+  <copyField source="other_location_t" dest="other_location_spell"/>
+  <copyField source="other_location_addl_t" dest="other_location_spell"/> 
+  <!-- documentation spell check; should match fields for place request handler -->
+  <copyField source="other_location_t" dest="other_location_spell"/>
+  <copyField source="other_location_addl_t" dest="other_location_spell"/> 
+  <!-- military group spell check; should match fields for place request handler -->
+  <copyField source="military_group_t" dest="military_group_spell"/>
+  <copyField source="military_group_addl_t" dest="military_group_spell"/> 
+  
    <!-- OpenSearch query field should match request handler search fields -->
    <copyField source="title_t" dest="opensearch_display"/>
    <copyField source="subtitle_t" dest="opensearch_display"/>
@@ -625,7 +669,19 @@
    <copyField source="subject_t" dest="opensearch_display"/>
    <copyField source="subject_addl_t" dest="opensearch_display"/>  
   <copyField source="place_t" dest="opensearch_display"/>
-
+  <copyField source="original_location_t" dest="opensearch_display"/>
+  <copyField source="location_t" dest="opensearch_display"/>
+  <copyField source="ethnic_group_t" dest="opensearch_display"/>
+  <copyField source="source_t" dest="opensearch_display"/>
+  <copyField source="first_location_t" dest="opensearch_display"/>
+  <copyField source="keyword_t" dest="opensearch_display"/>
+  <copyField source="people_t" dest="opensearch_display"/>
+  <copyField source="language_t" dest="opensearch_display"/>
+  <copyField source="date_t" dest="opensearch_display"/>
+  <copyField source="other_location_t" dest="opensearch_display"/>
+  <copyField source="documentation_t" dest="opensearch_display"/>
+  <copyField source="military_group_t" dest="opensearch_display"/>
+  <copyField source="id_t" dest="opensearch_display"/>
    <!-- for suggestions -->
    <copyField source="*_t" dest="suggest"/>
    <copyField source="*_facet" dest="suggest"/>

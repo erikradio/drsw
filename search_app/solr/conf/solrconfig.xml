@@ -111,7 +111,55 @@
          place_t^25000
          place_addl_unstem_search^250
          place_addl_t^50
-        
+         original_location_unstem_search^100000
+         original_location_t^25000
+         original_location_addl_unstem_search^250
+         original_location_addl_t^50  
+         first_location_unstem_search^100000
+         first_location_t^25000
+         first_location_addl_unstem_search^250
+         first_location_addl_t^50  
+        location_unstem_search^100000
+         location_t^25000
+         location_addl_unstem_search^250
+         location_addl_t^50
+         ethnic_group_unstem_search^100000
+         ethnic_group_t^25000
+         ethnic_group_addl_unstem_search^250
+         ethnic_group_addl_t^50
+         source_unstem_search^100000
+         source_t^25000
+         source_addl_unstem_search^250
+         source_addl_t^50
+         keyword_unstem_search^100000
+         keyword_t^25000
+         keyword_addl_unstem_search^250
+         keyword_addl_t^50
+         people_unstem_search^100000
+         people_t^25000
+         people_addl_unstem_search^250
+         people_addl_t^50
+         language_unstem_search^100000
+         language_t^25000
+         language_addl_unstem_search^250
+         language_addl_t^50
+         date_unstem_search^100000
+         date_t^25000
+         date_addl_unstem_search^250
+         date_addl_t^50
+         other_location_unstem_search^100000
+         other_location_t^25000
+         other_location_addl_unstem_search^250
+         other_location_addl_t^50
+         documentation_unstem_search^100000
+         documentation_t^25000
+         documentation_addl_unstem_search^250
+         documentation_addl_t^50
+         military_group_unstem_search^100000
+         military_group_t^25000
+         military_group_addl_unstem_search^250
+         military_group_addl_t^50
+         id_t^25000
        </str>
        <str name="pf">
          title_unstem_search^1000000
@@ -137,6 +185,32 @@
          text^10
          place_unstem_search^100000
          place_t^25000
+         original_location_unstem_search^100000
+         original_location_t^25000
+         first_location_unstem_search^100000
+         first_location_t^25000
+         location_unstem_search^100000
+         location_t^25000
+         ethnic_group_unstem_search^100000
+         ethnic_group_t^25000
+         location_unstem_search^100000
+         location_t^25000
+         keyword_unstem_search^100000
+         keyword_t^25000
+         people_unstem_search^100000
+         people_t^25000
+         language_unstem_search^100000
+         language_t^25000
+         date_unstem_search^100000
+         date_t^25000
+         documentation_unstem_search^100000
+         documentation_t^25000
+         military_group_unstem_search^100000
+         military_group_t^25000
+         other_location_unstem_search^100000
+         other_location_t^25000
+         
+         id_t^25000
        </str>
        <str name="author_qf">
          author_unstem_search^200
@@ -176,17 +250,173 @@
        </str>
        <str name="place_qf">
          place_unstem_search^50000
-         subplace_unstem_search^25000
+         place_unstem_search^25000
          place_addl_unstem_search^10000
          place_t^5000
          
        </str>
        <str name="place_pf">
          place_unstem_search^500000
-         subplace_unstem_search^250000
+         place_unstem_search^250000
          place_addl_unstem_search^100000
          place_t^50000
+       </str>
+       <str name="original_location_qf">
+         original_location_unstem_search^50000
+         original_location_unstem_search^25000
+         original_location_addl_unstem_search^10000
+         original_location_t^5000       
+       </str>
+       <str name="original_location_pf">
+         original_location_unstem_search^500000
+         original_location_unstem_search^250000
+         original_location_addl_unstem_search^100000
+         original_location_t^50000         
+       </str>
+       <str name="first_location_qf">
+         first_location_unstem_search^50000
+         first_location_unstem_search^25000
+         first_location_addl_unstem_search^10000
+         first_location_t^5000       
+       </str>
+       <str name="first_location_pf">
+         first_location_unstem_search^500000
+         first_location_unstem_search^250000
+         first_location_addl_unstem_search^100000
+         first_location_t^50000         
+       </str>
+       <str name="location_qf">
+         location_unstem_search^50000
+         location_unstem_search^25000
+         location_addl_unstem_search^10000
+         location_t^5000       
+       </str>
+       <str name="location_pf">
+         location_unstem_search^500000
+         location_unstem_search^250000
+         location_addl_unstem_search^100000
+         location_t^50000       
          
+       </str>
+       <str name="ethnic_group_qf">
+         ethnic_group_unstem_search^50000
+         ethnic_group_unstem_search^25000
+         ethnic_group_addl_unstem_search^10000
+         ethnic_group_t^5000       
+       </str>
+       <str name="ethnic_group_pf">
+         ethnic_group_unstem_search^50000
+         ethnic_group_unstem_search^25000
+         ethnic_group_addl_unstem_search^10000
+         ethnic_group_t^5000       
+       </str>
+       <str name="source_pf">
+         source_unstem_search^500000
+         source_unstem_search^250000
+         source_addl_unstem_search^100000
+         source_t^50000
+       </str>
+       <str name="source_qf">
+         source_unstem_search^500000
+         source_unstem_search^250000
+         source_addl_unstem_search^100000
+         source_t^50000
+       </str>
+       <str name="keyword_pf">
+         keyword_unstem_search^500000
+         keyword_unstem_search^250000
+         keyword_addl_unstem_search^100000
+         keyword_t^50000
+       </str>
+       <str name="keyword_qf">
+         keyword_unstem_search^500000
+         keyword_unstem_search^250000
+         keyword_addl_unstem_search^100000
+         keyword_t^50000
+       </str>
+       <str name="people_pf">
+         people_unstem_search^500000
+         people_unstem_search^250000
+         people_addl_unstem_search^100000
+         people_t^50000
+       </str>
+       <str name="people_qf">
+         people_unstem_search^500000
+         people_unstem_search^250000
+         people_addl_unstem_search^100000
+         people_t^50000
+       </str>
+       <str name="language_pf">
+         language_unstem_search^500000
+         language_unstem_search^250000
+         language_addl_unstem_search^100000
+         language_t^50000
+       </str>
+       <str name="language_qf">
+         language_unstem_search^500000
+         language_unstem_search^250000
+         language_addl_unstem_search^100000
+         language_t^50000
+       </str>
+       <str name="date_pf">
+         date_unstem_search^500000
+         date_unstem_search^250000
+         date_addl_unstem_search^100000
+         date_t^50000
+       </str>
+       <str name="date_qf">
+         date_unstem_search^500000
+         date_unstem_search^250000
+         date_addl_unstem_search^100000
+         date_t^50000
+       </str>
+       <str name="other_location_pf">
+         other_location_unstem_search^500000
+         other_location_unstem_search^250000
+         other_location_addl_unstem_search^100000
+         other_location_t^50000
+       </str>
+       <str name="other_location_qf">
+         other_location_unstem_search^500000
+         other_location_unstem_search^250000
+         other_location_addl_unstem_search^100000
+         other_location_t^50000
+       </str>
+       <str name="documentation_pf">
+         documentation_unstem_search^500000
+         documentation_unstem_search^250000
+         documentation_addl_unstem_search^100000
+         documentation_t^50000
+       </str>
+       <str name="documentation_qf">
+         documentation_unstem_search^500000
+         documentation_unstem_search^250000
+         documentation_addl_unstem_search^100000
+         documentation_t^50000
+       </str>
+       <str name="military_group_pf">
+         military_group_unstem_search^500000
+         military_group_unstem_search^250000
+         military_group_addl_unstem_search^100000
+         military_group_t^50000
+       </str>
+       <str name="military_group_qf">
+         military_group_unstem_search^500000
+         military_group_unstem_search^250000
+         military_group_addl_unstem_search^100000
+         military_group_t^50000
+       </str>
+       <str name="id_pf">
+         id_unstem_search^500000
+         id_unstem_search^250000
+         id_addl_unstem_search^100000
+         id_t^50000
+       </str>
+       <str name="id_qf">
+         id_unstem_search^500000
+         id_unstem_search^250000
+         id_addl_unstem_search^100000
+         id_t^50000
        </str>
        <!--<str name="subject_qf">
          subject_topic_unstem_search^200
@@ -214,6 +444,18 @@
          author_t,
          title_t,
          place_t,
+         original_location_t,
+         location_t,
+         ethnic_group_t,
+         source_t,
+         first_location_t,
+         keyword_t,
+         people_t,
+         language_t,
+         date_t,
+         other_location_t,
+         documentation_t,
+         military_group_t
        </str>
 
        <str name="facet">true</str>
@@ -356,11 +598,87 @@
     <lst name="spellchecker">
       <str name="name">place</str>
       <str name="field">place_spell</str>
-      <str name="spellcheckIndexDir">./place_title</str>
+      <str name="spellcheckIndexDir">./spell_place</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>
-
+    <lst name="spellchecker">
+      <str name="name">original_location</str>
+      <str name="field">original_location_spell</str>
+      <str name="spellcheckIndexDir">./spell_original_location</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">first_location</str>
+      <str name="field">first_location_spell</str>
+      <str name="spellcheckIndexDir">./spell_first_location</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">location</str>
+      <str name="field">location_spell</str>
+      <str name="spellcheckIndexDir">./spell_location</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">ethnic_group</str>
+      <str name="field">ethnic_group_spell</str>
+      <str name="spellcheckIndexDir">./spell_ethnic_group</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">source</str>
+      <str name="field">source_spell</str>
+      <str name="spellcheckIndexDir">./spell_source</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">keyword</str>
+      <str name="field">keyword_spell</str>
+      <str name="spellcheckIndexDir">./spell_keyword</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">people</str>
+      <str name="field">people_spell</str>
+      <str name="spellcheckIndexDir">./spell_people</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">language</str>
+      <str name="field">language_spell</str>
+      <str name="spellcheckIndexDir">./spell_language</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">other_location</str>
+      <str name="field">other_location_spell</str>
+      <str name="spellcheckIndexDir">./spell_other_location</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">documentation</str>
+      <str name="field">documentation_spell</str>
+      <str name="spellcheckIndexDir">./spell_documentation</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">military_group</str>
+      <str name="field">military_group_spell</str>
+      <str name="spellcheckIndexDir">./spell_military_group</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
     <!-- a spellchecker that uses a different distance measure -->
     <!--
        <lst name="spellchecker">
