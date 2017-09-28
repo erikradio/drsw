@@ -1,0 +1,46 @@
+<!--<div class="jumbotron text-center">-->
+  <!--<h2 class="jumbotron-heading"><%= t('blacklight.welcome') %></h2>-->
+  <h2 class="jumbotron-heading">Documentary Relations of the Southwest</h2>
+
+  <p>Documentary Relations of the Southwest provides the research tools and finding aids to the written record that began with the arrival of the Spanish explorers in the 1530's.
+<br/>
+The 1,500 microfilm reels of documents, many of them collected by the Jesuit Historical Institute, include the diaries of explorers and reports of missionaries and soldiers. They date from the first written accounts of contact with indigenous peoples in the 16th Century to the Mexican declaration of independence from Spain in 1821. The place names, architecture, food, and many of the Southwestern cultures have their origin in the history of this region. The '"Southwest" in this case covers Texas, New Mexico, Arizona, California, and northern Mexico—all of what was then northern New Spain.</p>
+
+<!--  <p>
+    <%= link_to 'Read the Documentation', 'https://github.com/projectblacklight/blacklight/wiki', class: 'btn btn-primary' %>
+    <%= link_to 'See Examples', 'http://projectblacklight.org', class: 'btn btn-secondary' %>
+  </p>
+</div>-->
+
+
+
+<!--  <p>There are many ways to override specific behaviors and views in Blacklight. Because Blacklight is distributed as a Rails engine-based gem, all customization of Blacklight behavior should be done within your application by overriding Blacklight-provided behaviors with your own.</p>
+
+  <p>
+    <ol>
+      <li>To modify this text, you need to <a href="http://guides.rubyonrails.org/engines.html#improving-engine-functionality">override the Blacklight-provided view</a>.
+  You can copy this file, located in the blacklight gem: <br />
+  <%= Blacklight.root %>/app/views/catalog/_home_text.html.erb <br />
+  to your own application: <br />
+   <%= Rails.root %>/app/views/catalog/_home_text.html.erb
+      </li>
+      <li><a href="https://github.com/projectblacklight/blacklight/wiki/Indexing-your-data-into-solr">Index your own data</a> into Solr</li>
+      <li><a href="https://github.com/projectblacklight/blacklight/wiki#blacklight-configuration">Configure Blacklight</a> to match your data and user-experience needs</li>
+      <li><a href="https://github.com/projectblacklight/blacklight/wiki#support">Get in touch</a> with your comments, questions, and ideas</li>
+    </ol>
+  </p>
+</div>
+
+<%# This is the same panel shown in the Rails welcome template %>
+<div id="about" class="card">
+  <h3 class='card-header collapsed collapse-toggle' data-toggle="collapse" data-target="#about-content"><a href="/rails/info/properties">About your application&rsquo;s environment</a></h3>
+  <div id="about-content" class="card-block collapse"></div>
+</div>-->
+
+<script>
+  Blacklight.onLoad(function() {
+    $('#about .card-header').one('click', function() {
+      $($(this).data('target')).load($(this).find('a').attr('href'));
+    });
+  });
+</script>
