@@ -43,7 +43,7 @@ class CatalogController < ApplicationController
     #config.index.thumbnail_field = 'thumbnail_path_ss'
 
     # solr field configuration for document/show views
-    config.show.title_field = 'title_display'
+    config.show.title_field = 'title_t'
     #config.show.display_type_field = 'format'
     #config.show.thumbnail_field = 'thumbnail_path_ss'
 
