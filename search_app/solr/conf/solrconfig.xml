@@ -135,10 +135,10 @@
          keyword_t^25000
          keyword_addl_unstem_search^250
          keyword_addl_t^50
-         people_unstem_search^100000
-         people_t^25000
-         people_addl_unstem_search^250
-         people_addl_t^50
+         person_unstem_search^100000
+         person_t^25000
+         person_addl_unstem_search^250
+         person_addl_t^50
          language_unstem_search^100000
          language_t^25000
          language_addl_unstem_search^250
@@ -197,8 +197,8 @@
          location_t^25000
          keyword_unstem_search^100000
          keyword_t^25000
-         people_unstem_search^100000
-         people_t^25000
+         person_unstem_search^100000
+         person_t^25000
          language_unstem_search^100000
          language_t^25000
          date_unstem_search^100000
@@ -334,17 +334,17 @@
          keyword_addl_unstem_search^100000
          keyword_t^50000
        </str>
-       <str name="people_pf">
-         people_unstem_search^500000
-         people_unstem_search^250000
-         people_addl_unstem_search^100000
-         people_t^50000
+       <str name="person_pf">
+         person_unstem_search^500000
+         person_unstem_search^250000
+         person_addl_unstem_search^100000
+         person_t^50000
        </str>
-       <str name="people_qf">
-         people_unstem_search^500000
-         people_unstem_search^250000
-         people_addl_unstem_search^100000
-         people_t^50000
+       <str name="person_qf">
+         person_unstem_search^500000
+         person_unstem_search^250000
+         person_addl_unstem_search^100000
+         person_t^50000
        </str>
        <str name="language_pf">
          language_unstem_search^500000
@@ -440,7 +440,7 @@
 
        <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">
-         id, 
+         id_t, 
          author_t,
          title_t,
          place_t,
@@ -450,7 +450,7 @@
          source_t,
          first_location_t,
          keyword_t,
-         people_t,
+         person_t,
          language_t,
          date_t,
          other_location_t,
@@ -470,7 +470,7 @@
        <str name="facet.field">subject_geo_facet</str>
        <str name="facet.field">subject_topic_facet</str>-->
        <str name="facet.field">keyword</str>
-       <str name="facet.field">people</str>
+       <str name="facet.field">person</str>
        <str name="facet.field">place</str>
        <str name="facet.field">ethnic_group</str>
        
@@ -645,9 +645,9 @@
       <str name="buildOnOptimize">true</str>
     </lst>
     <lst name="spellchecker">
-      <str name="name">people</str>
-      <str name="field">people_spell</str>
-      <str name="spellcheckIndexDir">./spell_people</str>
+      <str name="name">person</str>
+      <str name="field">person_spell</str>
+      <str name="spellcheckIndexDir">./spell_person</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>

@@ -492,7 +492,7 @@
      <!-- DRSW - Master Index  -->
    <field name="title" type="string" indexed="true" stored="true" multiValued="false"/>
      <field name="original_location" type="string" indexed="true" stored="true" multiValued="false"/>
-     <field name="location" type="text" indexed="true" stored="true" multiValued="false"/>
+     
      <field name="place" type="string" indexed="true" stored="true" multiValued="true"/>
      <field name="ethnic_group" type="string" indexed="true" stored="true" multiValued="true"/>
      <field name="precis" type="string" indexed="true" stored="true" multiValued="false"/>
@@ -574,6 +574,7 @@
    <!-- Copy Fields -->
         
    <!-- unstemmed fields -->
+  <copyField source="id_t" dest="title_unstem_search"/>
    <copyField source="title_t" dest="title_unstem_search"/>
    <copyField source="subtitle_t" dest="subtitle_unstem_search"/>
    <copyField source="title_addl_t" dest="title_addl_unstem_search"/>
@@ -586,7 +587,7 @@
    <copyField source="subject_topic_facet" dest="subject_topic_unstem_search"/>
   <copyField source="place_t" dest="place_unstem_search"/>
   <copyField source="original_location_t" dest="original_location_unstem_search"/>
-  <copyField source="location_t" dest="location_unstem_search"/>
+  
   <copyField source="first_location_t" dest="location_unstem_search"/>
   <copyField source="ethnic_group_t" dest="ethnic_group_unstem_search"/>
   <copyField source="source_t" dest="source_unstem_search"/>
@@ -626,9 +627,7 @@
   <!-- original location spell check; should match fields for place request handler -->
   <copyField source="original_location_t" dest="original_location_spell"/>
   <copyField source="original_location_addl_t" dest="original_location_spell"/>  
-  <!-- location spell check; should match fields for place request handler -->
-  <copyField source="location_t" dest="location_spell"/>
-  <copyField source="location_addl_t" dest="location_spell"/>
+  
   <!-- ethnic group spell check; should match fields for place request handler -->
   <copyField source="ethnic_group_t" dest="ethnic_group_spell"/>
   <copyField source="ethnic_group_addl_t" dest="ethnic_group_spell"/>  
@@ -659,6 +658,7 @@
   
    <!-- OpenSearch query field should match request handler search fields -->
    <copyField source="title_t" dest="opensearch_display"/>
+  
    <copyField source="subtitle_t" dest="opensearch_display"/>
    <copyField source="addl_titles_t" dest="opensearch_display"/>
    <copyField source="title_added_entry_t" dest="opensearch_display"/>

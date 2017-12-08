@@ -105,7 +105,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'date_t', label: 'Date'
     config.add_index_field 'author_t', label: 'Author'
     config.add_index_field 'precis_t', label: 'Precis'
-    config.add_index_field 'id_t', label: 'Serial Number'
+    config.add_index_field 'id_t', label: 'ID'
     config.add_index_field 'place_t', label: 'Place'
     # config.add_index_field 'original_location_t', label: 'Original Location'
 
@@ -140,11 +140,12 @@ class CatalogController < ApplicationController
     # config.add_show_field 'published_vern_display', label: 'Published'
     # config.add_show_field 'lc_callnum_display', label: 'Call number'
     # config.add_show_field 'isbn_t', label: 'ISBN'
+    config.add_show_field 'id_t', label: 'Serial Number'
     config.add_show_field 'title_display', label: 'Title'
     config.add_show_field 'author_t', label: 'Author'
     config.add_show_field 'date_t', label: 'Date'
     config.add_show_field 'language_t', label: 'Language'
-    config.add_show_field 'id_t', label: 'Serial Number'
+
     config.add_show_field 'documentation_t', label: 'Documentation'
     config.add_show_field 'precis_t', label: 'Precis'
     config.add_show_field 'people_t', label: 'People'
@@ -238,13 +239,7 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('location') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'location' }
-      field.solr_local_parameters = {
-        qf: '$location_qf',
-        pf: '$location_pf'
-      }
-    end
+    
 
     config.add_search_field('first_location') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'first_location' }
@@ -294,11 +289,11 @@ class CatalogController < ApplicationController
     }
 end
 
-    config.add_search_field('people') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'people' }
+    config.add_search_field('person') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'person' }
       field.solr_local_parameters = {
-        qf: '$people_qf',
-        pf: '$people_pf'
+        qf: '$person_qf',
+        pf: '$person_pf'
       }
     end
 
