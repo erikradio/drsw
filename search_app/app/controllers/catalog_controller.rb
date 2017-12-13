@@ -82,9 +82,11 @@ class CatalogController < ApplicationController
 
     config.add_facet_field 'place_facet', label: 'Place'
 
-    config.add_facet_field 'people_facet', label: 'People'
+    config.add_facet_field 'person_facet', label: 'Person'
     # config.add_facet_field 'author', label: 'Author'
     config.add_facet_field 'ethnic_group_facet', label: 'Ethnic Group'
+    config.add_facet_field 'military_group_facet', label: 'Military Group'
+    config.add_facet_field 'original_location_facet', label: 'Original Location'
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', :pivot => ['format', 'language_facet']
 
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
@@ -239,7 +241,7 @@ class CatalogController < ApplicationController
       }
     end
 
-    
+
 
     config.add_search_field('first_location') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'first_location' }

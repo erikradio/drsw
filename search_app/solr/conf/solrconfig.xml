@@ -473,6 +473,8 @@
        <str name="facet.field">person</str>
        <str name="facet.field">place</str>
        <str name="facet.field">ethnic_group</str>
+       <str name="facet.field">military_group</str>
+       <str name="facet.field">original_location</str>
        
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
