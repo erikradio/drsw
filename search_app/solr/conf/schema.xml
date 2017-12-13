@@ -500,7 +500,7 @@
      <field name="source" type="string" indexed="true" stored="true" multiValued="false"/>
      <field name="first_location" type="string" indexed="true" stored="true" multiValued="false"/>
      <field name="keyword" type="string" indexed="true" stored="true" multiValued="true"/>
-     <field name="people" type="string" indexed="true" stored="true" multiValued="true"/>    
+     <field name="person" type="string" indexed="true" stored="true" multiValued="true"/>    
      <field name="language" type="string" indexed="true" stored="true" multiValued="true"/>
      <field name="date" type="tint" indexed="true" stored="true" multiValued="true"/>
      <field name="other_location" type="string" indexed="true" stored="true" multiValued="false"/>
@@ -592,7 +592,7 @@
   <copyField source="ethnic_group_t" dest="ethnic_group_unstem_search"/>
   <copyField source="source_t" dest="source_unstem_search"/>
   <copyField source="keyword_t" dest="keyword_unstem_search"/>
-  <copyField source="people_t" dest="people_unstem_search"/>
+  <copyField source="person_t" dest="person_unstem_search"/>
   <copyField source="language_t" dest="language_unstem_search"/>
   <copyField source="date_t" dest="date_unstem_search"/>
   <copyField source="other_location_t" dest="other_location_unstem_search"/>
@@ -640,9 +640,9 @@
   <!-- keyword spell check; should match fields for place request handler -->
   <copyField source="keyword_t" dest="keyword_spell"/>
   <copyField source="keyword_addl_t" dest="keyword_spell"/>  
-  <!-- people spell check; should match fields for place request handler -->
-  <copyField source="people_t" dest="people_spell"/>
-  <copyField source="people_addl_t" dest="people_spell"/>
+  <!-- person spell check; should match fields for place request handler -->
+  <copyField source="person_t" dest="person_spell"/>
+  <copyField source="person_addl_t" dest="person_spell"/>
   <!-- language spell check; should match fields for place request handler -->
   <copyField source="language_t" dest="language_spell"/>
   <copyField source="language_addl_t" dest="language_spell"/> 
@@ -675,7 +675,7 @@
   <copyField source="source_t" dest="opensearch_display"/>
   <copyField source="first_location_t" dest="opensearch_display"/>
   <copyField source="keyword_t" dest="opensearch_display"/>
-  <copyField source="people_t" dest="opensearch_display"/>
+  <copyField source="person_t" dest="opensearch_display"/>
   <copyField source="language_t" dest="opensearch_display"/>
   <copyField source="date_t" dest="opensearch_display"/>
   <copyField source="other_location_t" dest="opensearch_display"/>
