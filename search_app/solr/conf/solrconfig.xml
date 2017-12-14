@@ -159,7 +159,7 @@
          military_group_t^25000
          military_group_addl_unstem_search^250
          military_group_addl_t^50
-         id_t^25000
+         
        </str>
        <str name="pf">
          title_unstem_search^1000000
@@ -210,7 +210,7 @@
          other_location_unstem_search^100000
          other_location_t^25000
          
-         id_t^25000
+         
        </str>
        <str name="author_qf">
          author_unstem_search^200
@@ -406,18 +406,7 @@
          military_group_addl_unstem_search^100000
          military_group_t^50000
        </str>
-       <str name="id_pf">
-         id_unstem_search^500000
-         id_unstem_search^250000
-         id_addl_unstem_search^100000
-         id_t^50000
-       </str>
-       <str name="id_qf">
-         id_unstem_search^500000
-         id_unstem_search^250000
-         id_addl_unstem_search^100000
-         id_t^50000
-       </str>
+      
        <!--<str name="subject_qf">
          subject_topic_unstem_search^200
          subject_unstem_search^125
@@ -440,7 +429,8 @@
 
        <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">
-         id_t, 
+         id,
+         
          author_t,
          title_t,
          place_t,

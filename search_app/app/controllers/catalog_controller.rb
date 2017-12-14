@@ -107,7 +107,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'date_t', label: 'Date'
     config.add_index_field 'author_t', label: 'Author'
     config.add_index_field 'precis_t', label: 'Precis'
-    config.add_index_field 'id_t', label: 'ID'
+    config.add_index_field 'id', label: 'ID'
     config.add_index_field 'place_t', label: 'Place'
     # config.add_index_field 'original_location_t', label: 'Original Location'
 
@@ -142,7 +142,7 @@ class CatalogController < ApplicationController
     # config.add_show_field 'published_vern_display', label: 'Published'
     # config.add_show_field 'lc_callnum_display', label: 'Call number'
     # config.add_show_field 'isbn_t', label: 'ISBN'
-    config.add_show_field 'id_t', label: 'Serial Number'
+    config.add_show_field 'id', label: 'ID'
     config.add_show_field 'title_display', label: 'Title'
     config.add_show_field 'author_t', label: 'Author'
     config.add_show_field 'date_t', label: 'Date'
