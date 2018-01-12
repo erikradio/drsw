@@ -37,10 +37,26 @@ class CatalogController < ApplicationController
     #  # q: '{!term f=id v=$id}'
     #}
 
+    #remove bookmarks
+    config.index.document_actions.delete(:bookmark)
+    config.show.document_actions.delete(:bookmark)
+    config.navbar.partials.delete(:bookmark)
+
+    #remove login
+    config.index.document_actions.delete(:search_history)
+    config.show.document_actions.delete(:search_history)
+    config.navbar.partials.delete(:search_history)
+
+    #remove sign in
+    config.index.document_actions.delete(:users)
+    config.show.document_actions.delete(:users)
+    config.navbar.partials.delete(:users)
+
     # solr field configuration for search results/index views
     config.index.title_field = 'title_t'
     # config.index.display_type_field = 'format'
     #config.index.thumbnail_field = 'thumbnail_path_ss'
+
 
     # solr field configuration for document/show views
     config.show.title_field = 'title_t'
