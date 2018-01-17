@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   mount Blacklight::Engine => '/'
   Blacklight::Marc.add_routes(self)
   root to: "catalog#index"
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resources :bookmarks do
     concerns :exportable
+  
 
     collection do
       delete 'clear'

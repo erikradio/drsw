@@ -38,19 +38,19 @@ class CatalogController < ApplicationController
     #}
 
     #remove bookmarks
-    config.index.document_actions.delete(:bookmark)
-    config.show.document_actions.delete(:bookmark)
-    config.navbar.partials.delete(:bookmark)
+    # config.index.document_actions.delete(:all)
+    # config.show.document_actions.delete(:all)
+    # config.navbar.partials.delete(:all)
 
-    #remove login
-    config.index.document_actions.delete(:search_history)
-    config.show.document_actions.delete(:search_history)
-    config.navbar.partials.delete(:search_history)
+    #remove search history
+    # config.index.document_actions.delete(:search_history)
+    # config.show.document_actions.delete(:search_history)
+    # config.navbar.partials.delete(:search_history)
 
     #remove sign in
-    config.index.document_actions.delete(:users)
-    config.show.document_actions.delete(:users)
-    config.navbar.partials.delete(:users)
+    # config.index.document_actions.delete(:user)
+    # config.show.document_actions.delete(:user)
+    # config.navbar.partials.delete(:user/)
 
     # solr field configuration for search results/index views
     config.index.title_field = 'title_t'
