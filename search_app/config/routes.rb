@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'masterfile/search'
+
   mount Blacklight::Engine => '/'
   Blacklight::Marc.add_routes(self)
   root to: "catalog#index"
