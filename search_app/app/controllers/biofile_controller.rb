@@ -47,13 +47,13 @@ class BiofileController < CatalogController
     # config.navbar.partials.delete(:user/)
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'b_name_t'
+    config.index.title_field = 'name_t'
     # config.index.display_type_field = 'format'
     #config.index.thumbnail_field = 'thumbnail_path_ss'
 
 
     # solr field configuration for document/show views
-    config.show.title_field = 'b_name_t'
+    config.show.title_field = 'name_t'
     #config.show.display_type_field = 'format'
     #config.show.thumbnail_field = 'thumbnail_path_ss'
 
@@ -88,9 +88,9 @@ class BiofileController < CatalogController
     # config.add_facet_field 'lc_1letter_facet', label: 'Call Number'
     # config.add_facet_field 'subject_geo_facet', label: 'Region'
     # config.add_facet_field 'subject_era_facet', label: 'Era'
-    config.add_facet_field 'b_ethnicity_facet', label: 'Ethnicity'
+    config.add_facet_field 'ethnicity_facet', label: 'Ethnicity'
 
-    config.add_facet_field 'b_occupation_facet', label: 'Occupation'
+    config.add_facet_field 'occupation_facet', label: 'Occupation'
 
     # config.add_facet_field 'person_facet', label: 'Person'
     # config.add_facet_field 'author', label: 'Author'
@@ -113,12 +113,12 @@ class BiofileController < CatalogController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    # config.add_index_field 'b_name_t', label: 'Name'
-    config.add_index_field 'b_baptism_t', label: 'Baptism'
-    config.add_index_field 'b_death_t', label: 'Death'
-    config.add_index_field 'b_sources_t', label: 'Sources'
+    # config.add_index_field 'name_t', label: 'Name'
+    config.add_index_field 'baptism_t', label: 'Baptism'
+    config.add_index_field 'death_t', label: 'Death'
+    config.add_index_field 'sources_t', label: 'Sources'
     config.add_index_field 'id', label: 'ID'
-    config.add_index_field 'b_occupation_t', label: 'Occupation'
+    config.add_index_field 'occupation_t', label: 'Occupation'
     # config.add_index_field 'original_location_t', label: 'Original Location'
 
 
@@ -153,30 +153,30 @@ class BiofileController < CatalogController
     # config.add_show_field 'lc_callnum_display', label: 'Call number'
     # config.add_show_field 'isbn_t', label: 'ISBN'
     config.add_show_field 'id', label: 'ID'
-    config.add_show_field 'b_name_t', label: 'Name'
+    config.add_show_field 'name_display', label: 'Name'
 
-    config.add_show_field 'b_baptism_t', label: 'Baptism'
-    config.add_show_field 'b_death_t', label: 'Death'
+    config.add_show_field 'baptism_t', label: 'Baptism'
+    config.add_show_field 'death_t', label: 'Death'
 
-    config.add_show_field 'b_familty_t', label: 'Family'
+    config.add_show_field 'familty_t', label: 'Family'
 
-    config.add_show_field 'b_occupation_t', label: 'Occupation'
-    config.add_show_field 'b_ethnicity_t', label: 'Ethnicity'
-    config.add_show_field 'b_first_marriage_t', label: 'First Marriage'
-    config.add_show_field 'b_second_marriage_t', label: 'Second Marriage'
-    config.add_show_field 'b_third_marriage_t', label: 'Third Marriage'
-    config.add_show_field 'b_other_t', label: 'Other Information'
-    config.add_show_field 'b_residents_t', label: 'Residents'
-    config.add_show_field 'b_unresidents_t', label: 'Undocumented Residents'
+    config.add_show_field 'occupation_t', label: 'Occupation'
+    config.add_show_field 'ethnicity_t', label: 'Ethnicity'
+    config.add_show_field 'first_marriage_t', label: 'First Marriage'
+    config.add_show_field 'second_marriage_t', label: 'Second Marriage'
+    config.add_show_field 'third_marriage_t', label: 'Third Marriage'
+    config.add_show_field 'other_t', label: 'Other Information'
+    config.add_show_field 'residents_t', label: 'Residents'
+    config.add_show_field 'unresidents_t', label: 'Undocumented Residents'
 
-    config.add_show_field 'b_unfamily_t', label: 'Undocumented Family'
+    config.add_show_field 'unfamily_t', label: 'Undocumented Family'
 
 
 
-    config.add_show_field 'b_confirmation_t', label: 'Confirmation'
-    config.add_show_field 'b_sources_t', label: 'Sources'
-    config.add_show_field 'b_seeAlso_t', label: 'See Also'
-    config.add_show_field 'b_notes_t', label: 'Notes'
+    config.add_show_field 'confirmation_t', label: 'Confirmation'
+    config.add_show_field 'sources_t', label: 'Sources'
+    config.add_show_field 'seeAlso_t', label: 'See Also'
+    config.add_show_field 'notes_t', label: 'Notes'
 
 
 
@@ -209,145 +209,145 @@ class BiofileController < CatalogController
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    config.add_search_field('b_name',label:'Name') do |field|
+    config.add_search_field('name',label:'Name') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_name' }
+      field.solr_parameters = { :'spellcheck.dictionary' => 'name' }
 
       # :solr_local_parameters will be sent using Solr LocalParams
       # syntax, as eg {! qf=$name_qf }. This is neccesary to use
       # Solr parameter de-referencing like $name_qf.
       # See: http://wiki.apache.org/solr/LocalParams
       field.solr_local_parameters = {
-        qf: '$b_name_qf',
-        pf: '$b_name_pf'
+        qf: '$name_qf',
+        pf: '$name_pf'
       }
     end
 
-    config.add_search_field('b_baptism', label:'Baptism') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_baptism' }
+    config.add_search_field('baptism', label:'Baptism') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'baptism' }
       field.solr_local_parameters = {
-        qf: '$b_baptism_qf',
-        pf: '$b_baptism_pf'
+        qf: '$baptism_qf',
+        pf: '$baptism_pf'
       }
     end
 
-    config.add_search_field('b_confirmation', label: 'Confirmation') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_confirmation' }
+    config.add_search_field('confirmation', label: 'Confirmation') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'confirmation' }
       field.solr_local_parameters = {
-        qf: '$b_confirmation_qf',
-        pf: '$b_confirmation_pf'
+        qf: '$confirmation_qf',
+        pf: '$confirmation_pf'
       }
     end
 
-    config.add_search_field('b_death', label: 'Death') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_death' }
+    config.add_search_field('death', label: 'Death') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'death' }
       field.solr_local_parameters = {
-        qf: '$b_death_qf',
-        pf: '$b_death_pf'
-      }
-    end
-
-
-
-
-
-    config.add_search_field('b_first_marriage',label:'First Marriage') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_first_marriage' }
-      field.solr_local_parameters = {
-        qf: '$b_first_marriage_qf',
-        pf: '$b_first_marriage_pf'
+        qf: '$death_qf',
+        pf: '$death_pf'
       }
     end
 
 
 
-    config.add_search_field('b_second_marriage',label:'Second Marriage') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_second_marriage' }
+
+
+    config.add_search_field('first_marriage',label:'First Marriage') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'first_marriage' }
       field.solr_local_parameters = {
-        qf: '$b_second_marriage_qf',
-        pf: '$b_second_marriage_pf'
+        qf: '$first_marriage_qf',
+        pf: '$first_marriage_pf'
       }
     end
 
-    config.add_search_field('b_third_marriage', label: 'Third Marriage') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_third_marriage' }
+
+
+    config.add_search_field('second_marriage',label:'Second Marriage') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'second_marriage' }
       field.solr_local_parameters = {
-        qf: '$b_third_marriage_qf',
-        pf: '$b_third_marriage_pf'
+        qf: '$second_marriage_qf',
+        pf: '$second_marriage_pf'
       }
     end
 
-    config.add_search_field('b_notes',label:'Notes') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_notes' }
+    config.add_search_field('third_marriage', label: 'Third Marriage') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'third_marriage' }
       field.solr_local_parameters = {
-        qf: '$b_notes_qf',
-        pf: '$b_notes_pf'
+        qf: '$third_marriage_qf',
+        pf: '$third_marriage_pf'
       }
     end
 
-    config.add_search_field('b_ethnicity', label: 'Ethnicity') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_ethnicity' }
+    config.add_search_field('notes',label:'Notes') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'notes' }
       field.solr_local_parameters = {
-        qf: '$b_ethnicity_qf',
-        pf: '$b_ethnicity_pf'
+        qf: '$notes_qf',
+        pf: '$notes_pf'
       }
     end
 
-    config.add_search_field('b_other', label:'Other Information') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_other' }
+    config.add_search_field('ethnicity', label: 'Ethnicity') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'ethnicity' }
       field.solr_local_parameters = {
-        qf: '$b_other_qf',
-        pf: '$b_other_pf'
+        qf: '$ethnicity_qf',
+        pf: '$ethnicity_pf'
+      }
+    end
+
+    config.add_search_field('other', label:'Other Information') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'other' }
+      field.solr_local_parameters = {
+        qf: '$other_qf',
+        pf: '$other_pf'
       }
   end
 
-  config.add_search_field('b_residents', label:'Residents') do |field|
-    field.solr_parameters = { :'spellcheck.dictionary' => 'b_residents' }
+  config.add_search_field('residents', label:'Residents') do |field|
+    field.solr_parameters = { :'spellcheck.dictionary' => 'residents' }
     field.solr_local_parameters = {
-      qf: '$b_residents_qf',
-      pf: '$b_residents_pf'
+      qf: '$residents_qf',
+      pf: '$residents_pf'
     }
 end
 
-    config.add_search_field('b_family', label: 'Family') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_family' }
+    config.add_search_field('family', label: 'Family') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'family' }
       field.solr_local_parameters = {
-        qf: '$b_family_qf',
-        pf: '$b_family_pf'
+        qf: '$family_qf',
+        pf: '$family_pf'
       }
     end
 
-      config.add_search_field('b_occupation',label:'Occupation') do |field|
-        field.solr_parameters = { :'spellcheck.dictionary' => 'b_occupation' }
+      config.add_search_field('occupation',label:'Occupation') do |field|
+        field.solr_parameters = { :'spellcheck.dictionary' => 'occupation' }
         field.solr_local_parameters = {
-          qf: '$b_occupation_qf',
-          pf: '$b_occupation_pf'
+          qf: '$occupation_qf',
+          pf: '$occupation_pf'
         }
       end
 
 
 
-    config.add_search_field('b_sources', label: 'Sources') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_sources' }
+    config.add_search_field('sources', label: 'Sources') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'sources' }
       field.solr_local_parameters = {
-        qf: '$b_sources_qf',
-        pf: '$b_sources_pf'
+        qf: '$sources_qf',
+        pf: '$sources_pf'
       }
     end
 
-    config.add_search_field('b_unresidents', label: 'Undocument Residents') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_unresidents' }
+    config.add_search_field('unresidents', label: 'Undocument Residents') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'unresidents' }
       field.solr_local_parameters = {
-        qf: '$b_unresidents_qf',
-        pf: '$b_unresidents_pf'
+        qf: '$unresidents_qf',
+        pf: '$unresidents_pf'
       }
     end
 
-    config.add_search_field('b_unfamily', label: 'Undocumented Family') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'b_unfamily' }
+    config.add_search_field('unfamily', label: 'Undocumented Family') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'unfamily' }
       field.solr_local_parameters = {
-        qf: '$b_unfamily_qf',
-        pf: '$b_unfamily_pf'
+        qf: '$unfamily_qf',
+        pf: '$unfamily_pf'
       }
     end
 

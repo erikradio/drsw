@@ -162,74 +162,74 @@
          military_group_addl_t^50
          
          <!-- biofile elements -->
-         b_name_unstem_search^100000
-         b_name_t^25000
-         b_name_addl_unstem_search^250
-         b_name_addl_t^50
-         b_baptism_unstem_search^100000
-         b_baptism_t^25000
-         b_baptism_addl_unstem_search^250
-         b_baptism_addl_t^50
-         b_death_unstem_search^100000
-         b_death_t^25000
-         b_death_addl_unstem_search^250
-         b_death_addl_t^50
-         b_sources_unstem_search^100000
-         b_sources_t^25000
-         b_sources_addl_unstem_search^250
-         b_sources_addl_t^50
-         b_confirmation_unstem_search^100000
-         b_confirmation_t^25000
-         b_confirmation_addl_unstem_search^250
-         b_confirmation_addl_t^50
-         b_ethnicity_unstem_search^100000
-         b_ethnicity_t^25000
-         b_ethnicity_addl_unstem_search^250
-         b_ethnicity_addl_t^50
-         b_family_unstem_search^100000
-         b_family_t^25000
-         b_family_addl_unstem_search^250
-         b_family_addl_t^50
-         b_first_marriage_unstem_search^100000
-         b_first_marriage_t^25000
-         b_first_marriage_addl_unstem_search^250
-         b_first_marriage_addl_t^50
-         b_notes_unstem_search^100000
-         b_notes_t^25000
-         b_notes_addl_unstem_search^250
-         b_notes_addl_t^50
-         b_occupation_unstem_search^100000
-         b_occupation_t^25000
-         b_occupation_addl_unstem_search^250
-         b_occupation_addl_t^50
-         b_other_unstem_search^100000
-         b_other_t^25000
-         b_other_addl_unstem_search^250
-         b_other_addl_t^50
-         b_residents_unstem_search^100000
-         b_residents_t^25000
-         b_residents_addl_unstem_search^250
-         b_residents_addl_t^50
-         b_seeAlso_unstem_search^100000
-         b_seeAlso_t^25000
-         b_seeAlso_addl_unstem_search^250
-         b_seeAlso_addl_t^50
-         b_second_marriage_unstem_search^100000
-         b_second_marriage_t^25000
-         b_second_marriage_addl_unstem_search^250
-         b_second_marriage_addl_t^50
-         b_third_marriage_unstem_search^100000
-         b_third_marriage_t^25000
-         b_third_marriage_addl_unstem_search^250
-         b_third_marriage_addl_t^50
-         b_unresidents_unstem_search^100000
-         b_unresidents_t^25000
-         b_unresidents_addl_unstem_search^250
-         b_unresidents_addl_t^50
-         b_unfamily_unstem_search^100000
-         b_unfamily_t^25000
-         b_unfamily_addl_unstem_search^250
-         b_unfamily_addl_t^50
+         name_unstem_search^100000
+         name_t^25000
+         name_addl_unstem_search^250
+         name_addl_t^50
+         baptism_unstem_search^100000
+         baptism_t^25000
+         baptism_addl_unstem_search^250
+         baptism_addl_t^50
+         death_unstem_search^100000
+         death_t^25000
+         death_addl_unstem_search^250
+         death_addl_t^50
+         sources_unstem_search^100000
+         sources_t^25000
+         sources_addl_unstem_search^250
+         sources_addl_t^50
+         confirmation_unstem_search^100000
+         confirmation_t^25000
+         confirmation_addl_unstem_search^250
+         confirmation_addl_t^50
+         ethnicity_unstem_search^100000
+         ethnicity_t^25000
+         ethnicity_addl_unstem_search^250
+         ethnicity_addl_t^50
+         family_unstem_search^100000
+         family_t^25000
+         family_addl_unstem_search^250
+         family_addl_t^50
+         first_marriage_unstem_search^100000
+         first_marriage_t^25000
+         first_marriage_addl_unstem_search^250
+         first_marriage_addl_t^50
+         notes_unstem_search^100000
+         notes_t^25000
+         notes_addl_unstem_search^250
+         notes_addl_t^50
+         occupation_unstem_search^100000
+         occupation_t^25000
+         occupation_addl_unstem_search^250
+         occupation_addl_t^50
+         other_unstem_search^100000
+         other_t^25000
+         other_addl_unstem_search^250
+         other_addl_t^50
+         residents_unstem_search^100000
+         residents_t^25000
+         residents_addl_unstem_search^250
+         residents_addl_t^50
+         seeAlso_unstem_search^100000
+         seeAlso_t^25000
+         seeAlso_addl_unstem_search^250
+         seeAlso_addl_t^50
+         second_marriage_unstem_search^100000
+         second_marriage_t^25000
+         second_marriage_addl_unstem_search^250
+         second_marriage_addl_t^50
+         third_marriage_unstem_search^100000
+         third_marriage_t^25000
+         third_marriage_addl_unstem_search^250
+         third_marriage_addl_t^50
+         unresidents_unstem_search^100000
+         unresidents_t^25000
+         unresidents_addl_unstem_search^250
+         unresidents_addl_t^50
+         unfamily_unstem_search^100000
+         unfamily_t^25000
+         unfamily_addl_unstem_search^250
+         unfamily_addl_t^50
          
        </str>
        <str name="pf">
@@ -283,8 +283,8 @@
          other_location_t^25000
          
          <!-- biofile elements -->
-         b_baptism_unstem_search^100000
-         b_baptism_t^25000
+         baptism_unstem_search^100000
+         baptism_t^25000
          sourcs_unstem_search^100000
          sources_t^25000
          confirmation_unstem_search^100000
@@ -516,113 +516,113 @@
          military_group_t^50000
        </str>
       <!-- biofile elements -->
-       <str name="b_baptism_pf">
-         b_baptism_unstem_search^500000
-         b_baptism_unstem_search^250000
-         b_baptism_addl_unstem_search^100000
-         b_baptism_t^50000
+       <str name="baptism_pf">
+         baptism_unstem_search^500000
+         baptism_unstem_search^250000
+         baptism_addl_unstem_search^100000
+         baptism_t^50000
        </str>
-       <str name="b_sources_pf">
-         b_sources_unstem_search^500000
-         b_sources_unstem_search^250000
-         b_sources_addl_unstem_search^100000
-         b_sources_t^50000
+       <str name="sources_pf">
+         sources_unstem_search^500000
+         sources_unstem_search^250000
+         sources_addl_unstem_search^100000
+         sources_t^50000
        </str>
-       <str name="b_confirmation_pf">
-         b_confirmation_unstem_search^500000
-         b_confirmation_unstem_search^250000
-         b_confirmation_addl_unstem_search^100000
-         b_confirmation_t^50000
+       <str name="confirmation_pf">
+         confirmation_unstem_search^500000
+         confirmation_unstem_search^250000
+         confirmation_addl_unstem_search^100000
+         confirmation_t^50000
        </str>
-       <str name="b_death_pf">
-         b_death_unstem_search^500000
-         b_death_unstem_search^250000
-         b_death_addl_unstem_search^100000
-         b_death_t^50000
+       <str name="death_pf">
+         death_unstem_search^500000
+         death_unstem_search^250000
+         death_addl_unstem_search^100000
+         death_t^50000
        </str>
-       <str name="b_ethnicity_pf">
-         b_ethnicity_unstem_search^500000
-         b_ethnicity_unstem_search^250000
-         b_ethnicity_addl_unstem_search^100000
-         b_ethnicity_t^50000
+       <str name="ethnicity_pf">
+         ethnicity_unstem_search^500000
+         ethnicity_unstem_search^250000
+         ethnicity_addl_unstem_search^100000
+         ethnicity_t^50000
        </str>
-       <str name="b_family_pf">
-         b_family_unstem_search^500000
-         b_family_unstem_search^250000
-         b_family_addl_unstem_search^100000
-         b_family_t^50000
+       <str name="family_pf">
+         family_unstem_search^500000
+         family_unstem_search^250000
+         family_addl_unstem_search^100000
+         family_t^50000
        </str>
-       <str name="b_first_marriage_pf">
-         b_first_marriage_unstem_search^500000
-         b_first_marriage_unstem_search^250000
-         b_first_marriage_addl_unstem_search^100000
-         b_first_marriage_t^50000
+       <str name="first_marriage_pf">
+         first_marriage_unstem_search^500000
+         first_marriage_unstem_search^250000
+         first_marriage_addl_unstem_search^100000
+         first_marriage_t^50000
        </str>
-       <str name="b_second_marriage_pf">
-         b_second_marriage_unstem_search^500000
-         b_second_marriage_unstem_search^250000
-         b_second_marriage_addl_unstem_search^100000
-         b_second_marriage_t^50000
+       <str name="second_marriage_pf">
+         second_marriage_unstem_search^500000
+         second_marriage_unstem_search^250000
+         second_marriage_addl_unstem_search^100000
+         second_marriage_t^50000
        </str>
-       <str name="b_third_marriage_pf">
-         b_third_marriage_unstem_search^500000
-         b_third_marriage_unstem_search^250000
-         b_third_marriage_addl_unstem_search^100000
-         b_third_marriage_t^50000
+       <str name="third_marriage_pf">
+         third_marriage_unstem_search^500000
+         third_marriage_unstem_search^250000
+         third_marriage_addl_unstem_search^100000
+         third_marriage_t^50000
        </str>
-       <str name="b_notes_pf">
-         b_notes_unstem_search^500000
-         b_notes_unstem_search^250000
-         b_notes_addl_unstem_search^100000
-         b_notes_t^50000
+       <str name="notes_pf">
+         notes_unstem_search^500000
+         notes_unstem_search^250000
+         notes_addl_unstem_search^100000
+         notes_t^50000
        </str>
-       <str name="b_occupation_pf">
-         b_occupation_unstem_search^500000
-         b_occupation_unstem_search^250000
-         b_occupation_addl_unstem_search^100000
-         b_occupation_t^50000
+       <str name="occupation_pf">
+         occupation_unstem_search^500000
+         occupation_unstem_search^250000
+         occupation_addl_unstem_search^100000
+         occupation_t^50000
        </str>
-       <str name="b_other_pf">
-         b_other_unstem_search^500000
-         b_other_unstem_search^250000
-         b_other_addl_unstem_search^100000
-         b_other_t^50000
+       <str name="other_pf">
+         other_unstem_search^500000
+         other_unstem_search^250000
+         other_addl_unstem_search^100000
+         other_t^50000
        </str>
-       <str name="b_residents_pf">
-         b_residents_unstem_search^500000
-         b_residents_unstem_search^250000
-         b_residents_addl_unstem_search^100000
-         b_residents_t^50000
+       <str name="residents_pf">
+         residents_unstem_search^500000
+         residents_unstem_search^250000
+         residents_addl_unstem_search^100000
+         residents_t^50000
        </str>
-       <str name="b_seeAlso_pf">
-         b_seeAlso_unstem_search^500000
-         b_seeAlso_unstem_search^250000
-         b_seeAlso_addl_unstem_search^100000
-         b_seeAlso_t^50000
+       <str name="seeAlso_pf">
+         seeAlso_unstem_search^500000
+         seeAlso_unstem_search^250000
+         seeAlso_addl_unstem_search^100000
+         seeAlso_t^50000
        </str>
-       <str name="b_second_marriage_pf">
-         b_second_marriage_unstem_search^500000
-         b_second_marriage_unstem_search^250000
-         b_second_marriage_addl_unstem_search^100000
-         b_second_marriage_t^50000
+       <str name="second_marriage_pf">
+         second_marriage_unstem_search^500000
+         second_marriage_unstem_search^250000
+         second_marriage_addl_unstem_search^100000
+         second_marriage_t^50000
        </str>
-       <str name="b_third_marriage_pf">
-         b_third_marriage_unstem_search^500000
-         b_third_marriage_unstem_search^250000
-         b_third_marriage_addl_unstem_search^100000
-         b_third_marriage_t^50000
+       <str name="third_marriage_pf">
+         third_marriage_unstem_search^500000
+         third_marriage_unstem_search^250000
+         third_marriage_addl_unstem_search^100000
+         third_marriage_t^50000
        </str>
-       <str name="b_unresidents_pf">
-         b_unresidents_unstem_search^500000
-         b_unresidents_unstem_search^250000
-         b_unresidents_addl_unstem_search^100000
-         b_unresidents_t^50000
+       <str name="unresidents_pf">
+         unresidents_unstem_search^500000
+         unresidents_unstem_search^250000
+         unresidents_addl_unstem_search^100000
+         unresidents_t^50000
        </str>
-       <str name="b_unfamily_pf">
-         b_unfamily_unstem_search^500000
-         b_unfamily_unstem_search^250000
-         b_unfamily_addl_unstem_search^100000
-         b_unfamily_t^50000
+       <str name="unfamily_pf">
+         unfamily_unstem_search^500000
+         unfamily_unstem_search^250000
+         unfamily_addl_unstem_search^100000
+         unfamily_t^50000
        </str>
        <!--<str name="subject_qf">
          subject_topic_unstem_search^200
@@ -664,23 +664,23 @@
          documentation_t,
          military_group_t
          <!-- biolfile elements -->
-         b_baptism_t,
-         b_sources_t,
-         b_confirmation_t,
-         b_death_t,
-         b_ethnicity_t,
-         b_family_t,
-         b_first_marriage_t,
-         b_second_marriage_t,
-         b_third_marriage_t,
-         b_name_t,
-         b_notes_t,
-         b_occupation_t,
-         b_other_t,
-         b_residents_t,
-         b_seeAlso_t,
-         b_unresidents_t,
-         b_unfamily_t
+         baptism_t,
+         sources_t,
+         confirmation_t,
+         death_t,
+         ethnicity_t,
+         family_t,
+         first_marriage_t,
+         second_marriage_t,
+         third_marriage_t,
+         name_t,
+         notes_t,
+         occupation_t,
+         other_t,
+         residents_t,
+         seeAlso_t,
+         unresidents_t,
+         unfamily_t
        </str>
 
        <str name="facet">true</str>
@@ -690,7 +690,7 @@
        <str name="facet.field">lc_alpha_facet</str>
        <str name="facet.field">lc_b4cutter_facet</str>
        <str name="facet.field">language_facet</str>
-       <str name="facet.field">pub_date</str>
+       <str name="facet.field">pudate</str>
        <str name="facet.field">subject_era_facet</str>
        <str name="facet.field">subject_geo_facet</str>
        <str name="facet.field">subject_topic_facet</str>-->
@@ -713,8 +713,8 @@
        <str name="spellcheck.count">5</str>
        
        <!-- biofile elements -->
-       <str name="facet.field">b_occupation</str>
-       <str name="facet.field">b_ethnicity</str>
+       <str name="facet.field">occupation</str>
+       <str name="facet.field">ethnicity</str>
        
        
 
