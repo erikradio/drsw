@@ -47,13 +47,13 @@ class BiofileController < CatalogController
     # config.navbar.partials.delete(:user/)
 
     # solr field configuration for search results/index views
-    config.index.name_field = 'b_name_t'
+    config.index.title_field = 'b_name_t'
     # config.index.display_type_field = 'format'
     #config.index.thumbnail_field = 'thumbnail_path_ss'
 
 
     # solr field configuration for document/show views
-    config.show.name_field = 'b_name_t'
+    config.show.title_field = 'b_name_t'
     #config.show.display_type_field = 'format'
     #config.show.thumbnail_field = 'thumbnail_path_ss'
 
@@ -90,7 +90,7 @@ class BiofileController < CatalogController
     # config.add_facet_field 'subject_era_facet', label: 'Era'
     config.add_facet_field 'b_ethnicity_facet', label: 'Ethnicity'
 
-    config.add_facet_field 'b_b_occupation_facet', label: 'b_occupation'
+    config.add_facet_field 'b_occupation_facet', label: 'Occupation'
 
     # config.add_facet_field 'person_facet', label: 'Person'
     # config.add_facet_field 'author', label: 'Author'
@@ -113,12 +113,12 @@ class BiofileController < CatalogController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'b_name_t', label: 'Name'
+    # config.add_index_field 'b_name_t', label: 'Name'
     config.add_index_field 'b_baptism_t', label: 'Baptism'
     config.add_index_field 'b_death_t', label: 'Death'
-    config.add_index_field 'b_sources_t', label: 'b_sources'
+    config.add_index_field 'b_sources_t', label: 'Sources'
     config.add_index_field 'id', label: 'ID'
-    config.add_index_field 'b_occupation_t', label: 'b_occupation'
+    config.add_index_field 'b_occupation_t', label: 'Occupation'
     # config.add_index_field 'original_location_t', label: 'Original Location'
 
 
@@ -153,24 +153,23 @@ class BiofileController < CatalogController
     # config.add_show_field 'lc_callnum_display', label: 'Call number'
     # config.add_show_field 'isbn_t', label: 'ISBN'
     config.add_show_field 'id', label: 'ID'
-    config.add_show_field 'b_name_display', label: 'Name'
+    config.add_show_field 'b_name_t', label: 'Name'
 
     config.add_show_field 'b_baptism_t', label: 'Baptism'
     config.add_show_field 'b_death_t', label: 'Death'
 
     config.add_show_field 'b_familty_t', label: 'Family'
 
-    config.add_show_field 'people_t', label: 'People'
     config.add_show_field 'b_occupation_t', label: 'Occupation'
     config.add_show_field 'b_ethnicity_t', label: 'Ethnicity'
     config.add_show_field 'b_first_marriage_t', label: 'First Marriage'
     config.add_show_field 'b_second_marriage_t', label: 'Second Marriage'
     config.add_show_field 'b_third_marriage_t', label: 'Third Marriage'
-    config.add_show_field 'b_other_t', label: 'Other?'
+    config.add_show_field 'b_other_t', label: 'Other Information'
     config.add_show_field 'b_residents_t', label: 'Residents'
-    config.add_show_field 'b_unresidents_t', label: 'UNRESIDENTS'
+    config.add_show_field 'b_unresidents_t', label: 'Undocumented Residents'
 
-    config.add_show_field 'b_unfamily_t', label: 'UNFAMILY'
+    config.add_show_field 'b_unfamily_t', label: 'Undocumented Family'
 
 
 
@@ -210,7 +209,7 @@ class BiofileController < CatalogController
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    config.add_search_field('name') do |field|
+    config.add_search_field('b_name',label:'Name') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
       field.solr_parameters = { :'spellcheck.dictionary' => 'b_name' }
 
@@ -294,7 +293,7 @@ class BiofileController < CatalogController
       }
     end
 
-    config.add_search_field('b_other', label:'Other?') do |field|
+    config.add_search_field('b_other', label:'Other Information') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'b_other' }
       field.solr_local_parameters = {
         qf: '$b_other_qf',
@@ -336,7 +335,7 @@ end
       }
     end
 
-    config.add_search_field('b_unresidents', label: 'UNRESIDENTS') do |field|
+    config.add_search_field('b_unresidents', label: 'Undocument Residents') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'b_unresidents' }
       field.solr_local_parameters = {
         qf: '$b_unresidents_qf',
@@ -344,7 +343,7 @@ end
       }
     end
 
-    config.add_search_field('b_unfamily', label: 'UNFAMILY') do |field|
+    config.add_search_field('b_unfamily', label: 'Undocumented Family') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'b_unfamily' }
       field.solr_local_parameters = {
         qf: '$b_unfamily_qf',
