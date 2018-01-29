@@ -1,5 +1,4 @@
-class MasterfileController < CatalogController
-
+class BiofileController < CatalogController
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
@@ -48,13 +47,13 @@ class MasterfileController < CatalogController
     # config.navbar.partials.delete(:user/)
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_t'
+    config.index.name_field = 'b_name_t'
     # config.index.display_type_field = 'format'
     #config.index.thumbnail_field = 'thumbnail_path_ss'
 
 
     # solr field configuration for document/show views
-    config.show.title_field = 'title_t'
+    config.show.name_field = 'b_name_t'
     #config.show.display_type_field = 'format'
     #config.show.thumbnail_field = 'thumbnail_path_ss'
 
@@ -84,20 +83,20 @@ class MasterfileController < CatalogController
 
     # config.add_facet_field 'format', label: 'Format'
     # config.add_facet_field 'pub_date', label: 'Publication Year', single: true
-    # config.add_facet_field 'subject_topic_facet', label: 'Keyword', limit: 20, index_range: 'A'..'Z'
+    # config.add_facet_field 'subject_topic_facet', label: 'ethnicity', limit: 20, index_range: 'A'..'Z'
     # config.add_facet_field 'language_facet', label: 'Language', limit: true
     # config.add_facet_field 'lc_1letter_facet', label: 'Call Number'
     # config.add_facet_field 'subject_geo_facet', label: 'Region'
     # config.add_facet_field 'subject_era_facet', label: 'Era'
-    config.add_facet_field 'keyword_facet', label: 'Keyword'
+    config.add_facet_field 'b_ethnicity_facet', label: 'Ethnicity'
 
-    config.add_facet_field 'place_facet', label: 'Place'
+    config.add_facet_field 'b_b_occupation_facet', label: 'b_occupation'
 
-    config.add_facet_field 'person_facet', label: 'Person'
+    # config.add_facet_field 'person_facet', label: 'Person'
     # config.add_facet_field 'author', label: 'Author'
-    config.add_facet_field 'ethnic_group_facet', label: 'Ethnic Group'
-    config.add_facet_field 'military_group_facet', label: 'Military Group'
-    config.add_facet_field 'original_location_facet', label: 'Original Location'
+    # config.add_facet_field 'ethnic_group_facet', label: 'Ethnic Group'
+    # config.add_facet_field 'military_group_facet', label: 'Military Group'
+    # config.add_facet_field 'original_location_facet', label: 'Original Location'
     # config.add_facet_field 'example_pivot_field', label: 'Pivot Field', :pivot => ['format', 'language_facet']
 
     # config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
@@ -114,12 +113,12 @@ class MasterfileController < CatalogController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_t', label: 'Title'
-    config.add_index_field 'date_t', label: 'Date'
-    config.add_index_field 'author_t', label: 'Author'
-    config.add_index_field 'precis_t', label: 'Precis'
+    config.add_index_field 'b_name_t', label: 'Name'
+    config.add_index_field 'b_baptism_t', label: 'Baptism'
+    config.add_index_field 'b_death_t', label: 'Death'
+    config.add_index_field 'b_sources_t', label: 'b_sources'
     config.add_index_field 'id', label: 'ID'
-    config.add_index_field 'place_t', label: 'Place'
+    config.add_index_field 'b_occupation_t', label: 'b_occupation'
     # config.add_index_field 'original_location_t', label: 'Original Location'
 
 
@@ -128,7 +127,7 @@ class MasterfileController < CatalogController
 
 
 
-    # config.add_index_field 'title_vern_display', label: 'Title'
+    # config.add_index_field 'name_vern_display', label: 'name'
     # config.add_index_field 'author_display', label: 'Author'
     # config.add_index_field 'author_vern_display', label: 'Author'
     # config.add_index_field 'format', label: 'Format'
@@ -140,9 +139,9 @@ class MasterfileController < CatalogController
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
 
-    # config.add_show_field 'title_vern_display', label: 'Title'
-    # config.add_show_field 'subtitle_display', label: 'Subtitle'
-    # config.add_show_field 'subtitle_vern_display', label: 'Subtitle'
+    # config.add_show_field 'name_vern_display', label: 'name'
+    # config.add_show_field 'subname_display', label: 'Subname'
+    # config.add_show_field 'subname_vern_display', label: 'Subname'
     # config.add_show_field 'author_display', label: 'Author'
     # config.add_show_field 'author_vern_display', label: 'Author'
     # config.add_show_field 'format', label: 'Format'
@@ -154,30 +153,37 @@ class MasterfileController < CatalogController
     # config.add_show_field 'lc_callnum_display', label: 'Call number'
     # config.add_show_field 'isbn_t', label: 'ISBN'
     config.add_show_field 'id', label: 'ID'
-    config.add_show_field 'title_display', label: 'Title'
-    config.add_show_field 'author_t', label: 'Author'
-    config.add_show_field 'date_t', label: 'Date'
-    config.add_show_field 'language_t', label: 'Language'
+    config.add_show_field 'b_name_display', label: 'Name'
 
-    config.add_show_field 'documentation_t', label: 'Documentation'
-    config.add_show_field 'precis_t', label: 'Precis'
+    config.add_show_field 'b_baptism_t', label: 'Baptism'
+    config.add_show_field 'b_death_t', label: 'Death'
+
+    config.add_show_field 'b_familty_t', label: 'Family'
+
     config.add_show_field 'people_t', label: 'People'
-    config.add_show_field 'place_t', label: 'Place'
-    config.add_show_field 'ethnic_group_t', label: 'Ethnic Group'
-    config.add_show_field 'first_location_t', label: 'First Location'
-    config.add_show_field 'original_location_t', label: 'Original Location'
-    config.add_show_field 'other_location_t', label: 'Other Location'
-    config.add_show_field 'keyword_t', label: 'Keyword'
+    config.add_show_field 'b_occupation_t', label: 'Occupation'
+    config.add_show_field 'b_ethnicity_t', label: 'Ethnicity'
+    config.add_show_field 'b_first_marriage_t', label: 'First Marriage'
+    config.add_show_field 'b_second_marriage_t', label: 'Second Marriage'
+    config.add_show_field 'b_third_marriage_t', label: 'Third Marriage'
+    config.add_show_field 'b_other_t', label: 'Other?'
+    config.add_show_field 'b_residents_t', label: 'Residents'
+    config.add_show_field 'b_unresidents_t', label: 'UNRESIDENTS'
+
+    config.add_show_field 'b_unfamily_t', label: 'UNFAMILY'
 
 
-    config.add_show_field 'location_t', label: 'Location'
-    config.add_show_field 'note_t', label: 'Note'
-    config.add_show_field 'source_t', label: 'Source'
 
-    config.add_show_field 'military_group_t', label: 'Military Group'
+    config.add_show_field 'b_confirmation_t', label: 'Confirmation'
+    config.add_show_field 'b_sources_t', label: 'Sources'
+    config.add_show_field 'b_seeAlso_t', label: 'See Also'
+    config.add_show_field 'b_notes_t', label: 'Notes'
 
 
-    # "fielded" search configuration. Used by pulldown among other places.
+
+
+
+    # "fielded" search configuration. Used by pulldown among other b_occupations.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
     #
     # Search fields will inherit the :qt solr request handler from
@@ -204,129 +210,145 @@ class MasterfileController < CatalogController
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    config.add_search_field('title') do |field|
+    config.add_search_field('name') do |field|
       # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_name' }
 
       # :solr_local_parameters will be sent using Solr LocalParams
-      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
-      # Solr parameter de-referencing like $title_qf.
+      # syntax, as eg {! qf=$name_qf }. This is neccesary to use
+      # Solr parameter de-referencing like $name_qf.
       # See: http://wiki.apache.org/solr/LocalParams
       field.solr_local_parameters = {
-        qf: '$title_qf',
-        pf: '$title_pf'
+        qf: '$b_name_qf',
+        pf: '$b_name_pf'
       }
     end
 
-    config.add_search_field('author') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'author' }
+    config.add_search_field('b_baptism', label:'Baptism') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_baptism' }
       field.solr_local_parameters = {
-        qf: '$author_qf',
-        pf: '$author_pf'
+        qf: '$b_baptism_qf',
+        pf: '$b_baptism_pf'
       }
     end
 
-    config.add_search_field('date') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'date' }
+    config.add_search_field('b_confirmation', label: 'Confirmation') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_confirmation' }
       field.solr_local_parameters = {
-        qf: '$date_qf',
-        pf: '$date_pf'
+        qf: '$b_confirmation_qf',
+        pf: '$b_confirmation_pf'
       }
     end
 
-    config.add_search_field('documentation') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'documentation' }
+    config.add_search_field('b_death', label: 'Death') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_death' }
       field.solr_local_parameters = {
-        qf: '$documentation_qf',
-        pf: '$documentation_pf'
-      }
-    end
-
-
-
-
-
-    config.add_search_field('original_location') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'original_location' }
-      field.solr_local_parameters = {
-        qf: '$original_location_qf',
-        pf: '$original_location_pf'
+        qf: '$b_death_qf',
+        pf: '$b_death_pf'
       }
     end
 
 
 
-    config.add_search_field('first_location') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'first_location' }
+
+
+    config.add_search_field('b_first_marriage',label:'First Marriage') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_first_marriage' }
       field.solr_local_parameters = {
-        qf: '$first_location_qf',
-        pf: '$first_location_pf'
+        qf: '$b_first_marriage_qf',
+        pf: '$b_first_marriage_pf'
       }
     end
 
-    config.add_search_field('other_location') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'other_location' }
+
+
+    config.add_search_field('b_second_marriage',label:'Second Marriage') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_second_marriage' }
       field.solr_local_parameters = {
-        qf: '$other_location_qf',
-        pf: '$other_location_pf'
+        qf: '$b_second_marriage_qf',
+        pf: '$b_second_marriage_pf'
       }
     end
 
-    config.add_search_field('ethnic_group') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'ethnic_group' }
+    config.add_search_field('b_third_marriage', label: 'Third Marriage') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_third_marriage' }
       field.solr_local_parameters = {
-        qf: '$ethnic_group_qf',
-        pf: '$ethnic_group_pf'
+        qf: '$b_third_marriage_qf',
+        pf: '$b_third_marriage_pf'
       }
     end
 
-    config.add_search_field('keyword') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'keyword' }
+    config.add_search_field('b_notes',label:'Notes') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_notes' }
       field.solr_local_parameters = {
-        qf: '$keyword_qf',
-        pf: '$keyword_pf'
+        qf: '$b_notes_qf',
+        pf: '$b_notes_pf'
       }
     end
 
-    config.add_search_field('language') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'language' }
+    config.add_search_field('b_ethnicity', label: 'Ethnicity') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_ethnicity' }
       field.solr_local_parameters = {
-        qf: '$language_qf',
-        pf: '$language_pf'
+        qf: '$b_ethnicity_qf',
+        pf: '$b_ethnicity_pf'
+      }
+    end
+
+    config.add_search_field('b_other', label:'Other?') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_other' }
+      field.solr_local_parameters = {
+        qf: '$b_other_qf',
+        pf: '$b_other_pf'
       }
   end
 
-  config.add_search_field('military_group') do |field|
-    field.solr_parameters = { :'spellcheck.dictionary' => 'military_group' }
+  config.add_search_field('b_residents', label:'Residents') do |field|
+    field.solr_parameters = { :'spellcheck.dictionary' => 'b_residents' }
     field.solr_local_parameters = {
-      qf: '$military_group_qf',
-      pf: '$military_group_pf'
+      qf: '$b_residents_qf',
+      pf: '$b_residents_pf'
     }
 end
 
-    config.add_search_field('person') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'person' }
+    config.add_search_field('b_family', label: 'Family') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_family' }
       field.solr_local_parameters = {
-        qf: '$person_qf',
-        pf: '$person_pf'
+        qf: '$b_family_qf',
+        pf: '$b_family_pf'
       }
     end
 
-      config.add_search_field('place') do |field|
-        field.solr_parameters = { :'spellcheck.dictionary' => 'place' }
+      config.add_search_field('b_occupation',label:'Occupation') do |field|
+        field.solr_parameters = { :'spellcheck.dictionary' => 'b_occupation' }
         field.solr_local_parameters = {
-          qf: '$place_qf',
-          pf: '$place_pf'
+          qf: '$b_occupation_qf',
+          pf: '$b_occupation_pf'
         }
       end
 
 
 
-    config.add_search_field('source') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'source' }
+    config.add_search_field('b_sources', label: 'Sources') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_sources' }
       field.solr_local_parameters = {
-        qf: '$source_qf',
-        pf: '$source_pf'
+        qf: '$b_sources_qf',
+        pf: '$b_sources_pf'
+      }
+    end
+
+    config.add_search_field('b_unresidents', label: 'UNRESIDENTS') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_unresidents' }
+      field.solr_local_parameters = {
+        qf: '$b_unresidents_qf',
+        pf: '$b_unresidents_pf'
+      }
+    end
+
+    config.add_search_field('b_unfamily', label: 'UNFAMILY') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'b_unfamily' }
+      field.solr_local_parameters = {
+        qf: '$b_unfamily_qf',
+        pf: '$b_unfamily_pf'
       }
     end
 
@@ -358,10 +380,10 @@ end
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
-    # config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', label: 'relevance'
-    # config.add_sort_field 'pub_date_sort desc, title_sort asc', label: 'year'
-    # config.add_sort_field 'author_sort asc, title_sort asc', label: 'author'
-    # config.add_sort_field 'title_sort asc, pub_date_sort desc', label: 'title'
+    # config.add_sort_field 'score desc, pub_date_sort desc, name_sort asc', label: 'relevance'
+    # config.add_sort_field 'pub_date_sort desc, name_sort asc', label: 'year'
+    # config.add_sort_field 'author_sort asc, name_sort asc', label: 'author'
+    # config.add_sort_field 'name_sort asc, pub_date_sort desc', label: 'name'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.

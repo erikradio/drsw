@@ -1,0 +1,18 @@
+BID
+baptism
+sources
+confirmation
+death
+ethnicity (has facet)
+family
+marriage
+name*
+notes
+occupation (has facet)
+other
+residents
+seeAlso
+secondMarriage
+thirdMarriage
+unresidents(?)
+unfamily

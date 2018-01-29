@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'biofile/search'
+
   get 'masterfile/search'
 
   mount Blacklight::Engine => '/'
@@ -8,6 +10,14 @@ Rails.application.routes.draw do
     concern :searchable, Blacklight::Routes::Searchable.new
 
   resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+    concerns :searchable
+  end
+
+  resource :masterfile, only: [:search], as: 'masterfile', path: '/masterfile', controller: 'masterfile' do
+    concerns :searchable
+  end
+
+  resource :biofile, only: [:search], as: 'biofile', path: '/biofile', controller: 'biofile' do
     concerns :searchable
   end
 
@@ -20,7 +30,7 @@ Rails.application.routes.draw do
 
   resources :bookmarks do
     concerns :exportable
-  
+
 
     collection do
       delete 'clear'

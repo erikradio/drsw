@@ -507,7 +507,26 @@
      <field name="documentation" type="string" indexed="true" stored="true" multiValued="false"/>
      <field name="military_group" type="string" indexed="true" stored="true" multiValued="true"/>
      <field name="author" type="string" indexed="true" stored="true" multiValued="true"/>
-
+   
+   <!-- DRSW - Biofile -->
+   <field name="b_baptism" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_sources" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_confirmation" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_death" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_ethnicity" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_family" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_first_marriage" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_second_marriage" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_third_marriage" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_name" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_notes" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_occupation" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_other" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_residents" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_seeAlso" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_unresidents" type="string" indexed="true" stored="true" multiValued="true"/>
+   <field name="b_unfamily" type="string" indexed="true" stored="true" multiValued="true"/>
+   
    <!-- Dynamic field definitions.  If a field name is not found, dynamicFields
         will be used if the name matches any of the patterns.
         RESTRICTION: the glob-like pattern in the name attribute must have
@@ -575,6 +594,8 @@
         
    <!-- unstemmed fields -->
   <copyField source="id_t" dest="id_unstem_search"/>
+  <!-- masterfile elements -->
+  
    <copyField source="title_t" dest="title_unstem_search"/>
    <copyField source="subtitle_t" dest="subtitle_unstem_search"/>
    <copyField source="title_addl_t" dest="title_addl_unstem_search"/>
@@ -587,7 +608,6 @@
    <copyField source="subject_topic_facet" dest="subject_topic_unstem_search"/>
   <copyField source="place_t" dest="place_unstem_search"/>
   <copyField source="original_location_t" dest="original_location_unstem_search"/>
-  
   <copyField source="first_location_t" dest="location_unstem_search"/>
   <copyField source="ethnic_group_t" dest="ethnic_group_unstem_search"/>
   <copyField source="source_t" dest="source_unstem_search"/>
@@ -598,6 +618,27 @@
   <copyField source="other_location_t" dest="other_location_unstem_search"/>
   <copyField source="documentation_t" dest="documentation_unstem_search"/>
   <copyField source="military_group_t" dest="military_group_unstem_search"/>
+  
+  <!-- biofile elements -->
+  <copyField source="b_baptism_t" dest="title_unstem_search"/>
+  <copyField source="b_sources_t" dest="id_unstem_search"/>
+  <copyField source="b_confirmation_t" dest="id_unstem_search"/>
+  <copyField source="b_death_t" dest="id_unstem_search"/>
+  <copyField source="b_ethnicity_t" dest="id_unstem_search"/>
+  <copyField source="b_family_t" dest="id_unstem_search"/>
+  <copyField source="b_first_marriage_t" dest="id_unstem_search"/>
+  <copyField source="b_second_marriage_t" dest="id_unstem_search"/>
+  <copyField source="b_third_marriage_t" dest="id_unstem_search"/>
+  <copyField source="b_name_t" dest="id_unstem_search"/>
+  <copyField source="b_notes_t" dest="id_unstem_search"/>
+  <copyField source="b_occupation_t" dest="id_unstem_search"/>
+  <copyField source="b_other_t" dest="id_unstem_search"/>
+  <copyField source="b_residents_t" dest="id_unstem_search"/>
+  <copyField source="b_seeAlso_t" dest="id_unstem_search"/>
+  <copyField source="b_unresidents_t" dest="id_unstem_search"/>
+  <copyField source="b_unfamily_t" dest="id_unstem_search"/>
+  
+  
    <!-- sort fields 
    <copyField source="pub_date" dest="pub_date_sort"/>-->
    
@@ -607,6 +648,7 @@
    <!-- it won't work with a copy of a copy field -->
    <copyField source="*_t" dest="spell"/>
    <copyField source="*_facet" dest="spell"/>
+  <!-- masterfile elements -->
    <!-- title spell check;  should match fields for title request handler -->
    <copyField source="title_t" dest="title_spell"/>
    <copyField source="subtitle_t" dest="title_spell"/>
@@ -656,7 +698,59 @@
   <copyField source="military_group_t" dest="military_group_spell"/>
   <copyField source="military_group_addl_t" dest="military_group_spell"/> 
   
+  
+  <!-- biofile elements -->
+  <!-- b_baptism spell check; should match fields for place request handler -->
+  <copyField source="b_baptism_t" dest="b_baptism_spell"/>
+  <copyField source="b_baptism_addl_t" dest="b_baptism_spell"/> 
+  <!-- b_sources spell check; should match fields for place request handler -->
+  <copyField source="b_sources_t" dest="b_sources_spell"/>
+  <copyField source="b_sources_addl_t" dest="b_sources_spell"/> 
+  <!-- b_confirmation spell check; should match fields for place request handler -->
+  <copyField source="b_confirmation_t" dest="b_confirmation_spell"/>
+  <copyField source="b_confirmation_addl_t" dest="b_confirmation_spell"/> 
+  <!-- b_death spell check; should match fields for place request handler -->
+  <copyField source="b_death_t" dest="b_death_spell"/>
+  <copyField source="b_death_addl_t" dest="b_death_spell"/> 
+  <!-- b_ethnicity spell check; should match fields for place request handler -->
+  <copyField source="b_ethnicity_t" dest="b_ethnicity_spell"/>
+  <copyField source="b_ethnicity_addl_t" dest="b_ethnicity_spell"/> 
+  <!-- b_family spell check; should match fields for place request handler -->
+  <copyField source="b_family_t" dest="b_family_spell"/>
+  <copyField source="b_family_addl_t" dest="b_family_spell"/> 
+  <!-- b_marriage spell check; should match fields for place request handler -->
+  <copyField source="b_first_marriage_t" dest="b_marriage_spell"/>
+  <copyField source="b_first_marriage_addl_t" dest="b_marriage_spell"/> 
+  <!-- b_name spell check; should match fields for place request handler -->
+  <copyField source="b_name_t" dest="b_name_spell"/>
+  <copyField source="b_name_addl_t" dest="b_name_spell"/> 
+  <!-- b_occupation spell check; should match fields for place request handler -->
+  <copyField source="b_occupation_t" dest="b_occupation_spell"/>
+  <copyField source="b_occupation_addl_t" dest="b_occupation_spell"/> 
+  <!-- b_other spell check; should match fields for place request handler -->
+  <copyField source="b_other_t" dest="b_other_spell"/>
+  <copyField source="b_other_addl_t" dest="b_other_spell"/> 
+  <!-- b_residents spell check; should match fields for place request handler -->
+  <copyField source="b_residents_t" dest="b_residents_spell"/>
+  <copyField source="b_residents_addl_t" dest="b_residents_spell"/> 
+  <!-- b_seeAlso spell check; should match fields for place request handler -->
+  <copyField source="b_seeAlso_t" dest="b_seeAlso_spell"/>
+  <copyField source="b_seeAlso_addl_t" dest="b_seeAlso_spell"/> 
+  <!-- b_second_marriage spell check; should match fields for place request handler -->
+  <copyField source="b_second_marriage_t" dest="b_second_marriage_spell"/>
+  <copyField source="b_second_marriage_addl_t" dest="b_second_marriage_spell"/> 
+  <!-- b_third_marriage spell check; should match fields for place request handler -->
+  <copyField source="b_third_marriage_t" dest="b_third_marriage_spell"/>
+  <copyField source="b_third_marriage_addl_t" dest="b_third_marriage_spell"/> 
+  <!-- b_unresidents spell check; should match fields for place request handler -->
+  <copyField source="b_unresidents_t" dest="b_unresidents_spell"/>
+  <copyField source="b_unresidents_addl_t" dest="b_unresidents_spell"/> 
+  <!-- b_unfamily spell check; should match fields for place request handler -->
+  <copyField source="b_unfamily_t" dest="b_unfamily_spell"/>
+  <copyField source="b_unfamily_addl_t" dest="b_unfamily_spell"/> 
+  
    <!-- OpenSearch query field should match request handler search fields -->
+  <!-- masterfile elements -->
    <copyField source="title_t" dest="opensearch_display"/>
   
    <copyField source="subtitle_t" dest="opensearch_display"/>
@@ -682,6 +776,26 @@
   <copyField source="documentation_t" dest="opensearch_display"/>
   <copyField source="military_group_t" dest="opensearch_display"/>
   <copyField source="id_t" dest="opensearch_display"/>
+  
+  <!-- biofile elements -->
+  <copyField source="b_baptism_t" dest="opensearch_display"/>
+  <copyField source="b_sources_t" dest="opensearch_display"/>
+  <copyField source="b_confirmation_t" dest="opensearch_display"/>
+  <copyField source="b_death_t" dest="opensearch_display"/>
+  <copyField source="b_ethnicity_t" dest="opensearch_display"/>
+  <copyField source="b_family_t" dest="opensearch_display"/>
+  <copyField source="first_marriage_t" dest="opensearch_display"/>
+  <copyField source="b_second_marriage_t" dest="opensearch_display"/>
+  <copyField source="b_third_marriage_t" dest="opensearch_display"/>
+  <copyField source="b_name_t" dest="opensearch_display"/>
+  <copyField source="b_notes_t" dest="opensearch_display"/>
+  <copyField source="b_occupation_t" dest="opensearch_display"/>
+  <copyField source="b_other_t" dest="opensearch_display"/>
+  <copyField source="b_residents_t" dest="opensearch_display"/>
+  <copyField source="b_seeAlso_t" dest="opensearch_display"/>
+  <copyField source="b_unresidents_t" dest="opensearch_display"/>
+  <copyField source="b_unfamily_t" dest="opensearch_display"/>
+  
    <!-- for suggestions -->
    <copyField source="*_t" dest="suggest"/>
    <copyField source="*_facet" dest="suggest"/>
