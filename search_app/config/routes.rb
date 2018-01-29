@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root to: "catalog#index"
     concern :searchable, Blacklight::Routes::Searchable.new
 
-  resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+  resource :catalog, only: [:index], as: 'catalog', path: '/', controller: 'catalog' do
     concerns :searchable
   end
 
@@ -24,7 +24,15 @@ Rails.application.routes.draw do
   devise_for :users
   concern :exportable, Blacklight::Routes::Exportable.new
 
-  resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
+  # resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
+  #   concerns :exportable
+  # end
+
+  resources :solr_documents, only: [:show], path: '/masterfile', controller: 'masterfile' do
+    concerns :exportable
+  end
+
+  resources :solr_documents, only: [:show], path: '/biofile', controller: 'biofile' do
     concerns :exportable
   end
 
@@ -37,5 +45,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/masterfile/', to: 'masterfile#search', as: 'masterfile'
+  get '/catalog2/', to: 'biofile#search', as: 'biofile'
+
+  get '*path' => redirect('/')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
