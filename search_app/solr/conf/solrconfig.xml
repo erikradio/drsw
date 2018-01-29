@@ -522,7 +522,31 @@
          baptism_addl_unstem_search^100000
          baptism_t^50000
        </str>
+       <str name="baptism_qf">
+         baptism_unstem_search^500000
+         baptism_unstem_search^250000
+         baptism_addl_unstem_search^100000
+         baptism_t^50000
+       </str>
+       <str name="name_pf">
+         name_unstem_search^500000
+         name_unstem_search^250000
+         name_addl_unstem_search^100000
+         name_t^50000
+       </str>
+       <str name="name_qf">
+         name_unstem_search^500000
+         name_unstem_search^250000
+         name_addl_unstem_search^100000
+         name_t^50000
+       </str>
        <str name="sources_pf">
+         sources_unstem_search^500000
+         sources_unstem_search^250000
+         sources_addl_unstem_search^100000
+         sources_t^50000
+       </str>
+       <str name="sources_qf">
          sources_unstem_search^500000
          sources_unstem_search^250000
          sources_addl_unstem_search^100000
@@ -534,7 +558,19 @@
          confirmation_addl_unstem_search^100000
          confirmation_t^50000
        </str>
+       <str name="confirmation_qf">
+         confirmation_unstem_search^500000
+         confirmation_unstem_search^250000
+         confirmation_addl_unstem_search^100000
+         confirmation_t^50000
+       </str>
        <str name="death_pf">
+         death_unstem_search^500000
+         death_unstem_search^250000
+         death_addl_unstem_search^100000
+         death_t^50000
+       </str>
+       <str name="death_qf">
          death_unstem_search^500000
          death_unstem_search^250000
          death_addl_unstem_search^100000
@@ -546,7 +582,19 @@
          ethnicity_addl_unstem_search^100000
          ethnicity_t^50000
        </str>
+       <str name="ethnicity_qf">
+         ethnicity_unstem_search^500000
+         ethnicity_unstem_search^250000
+         ethnicity_addl_unstem_search^100000
+         ethnicity_t^50000
+       </str>
        <str name="family_pf">
+         family_unstem_search^500000
+         family_unstem_search^250000
+         family_addl_unstem_search^100000
+         family_t^50000
+       </str>
+       <str name="family_qf">
          family_unstem_search^500000
          family_unstem_search^250000
          family_addl_unstem_search^100000
@@ -558,13 +606,31 @@
          first_marriage_addl_unstem_search^100000
          first_marriage_t^50000
        </str>
+       <str name="first_marriage_qf">
+         first_marriage_unstem_search^500000
+         first_marriage_unstem_search^250000
+         first_marriage_addl_unstem_search^100000
+         first_marriage_t^50000
+       </str>
        <str name="second_marriage_pf">
          second_marriage_unstem_search^500000
          second_marriage_unstem_search^250000
          second_marriage_addl_unstem_search^100000
          second_marriage_t^50000
        </str>
+       <str name="second_marriage_qf">
+         second_marriage_unstem_search^500000
+         second_marriage_unstem_search^250000
+         second_marriage_addl_unstem_search^100000
+         second_marriage_t^50000
+       </str>
        <str name="third_marriage_pf">
+         third_marriage_unstem_search^500000
+         third_marriage_unstem_search^250000
+         third_marriage_addl_unstem_search^100000
+         third_marriage_t^50000
+       </str>
+       <str name="third_marriage_qf">
          third_marriage_unstem_search^500000
          third_marriage_unstem_search^250000
          third_marriage_addl_unstem_search^100000
@@ -576,7 +642,19 @@
          notes_addl_unstem_search^100000
          notes_t^50000
        </str>
+       <str name="notes_qf">
+         notes_unstem_search^500000
+         notes_unstem_search^250000
+         notes_addl_unstem_search^100000
+         notes_t^50000
+       </str>
        <str name="occupation_pf">
+         occupation_unstem_search^500000
+         occupation_unstem_search^250000
+         occupation_addl_unstem_search^100000
+         occupation_t^50000
+       </str>
+       <str name="occupation_qf">
          occupation_unstem_search^500000
          occupation_unstem_search^250000
          occupation_addl_unstem_search^100000
@@ -588,7 +666,19 @@
          other_addl_unstem_search^100000
          other_t^50000
        </str>
+       <str name="other_qf">
+         other_unstem_search^500000
+         other_unstem_search^250000
+         other_addl_unstem_search^100000
+         other_t^50000
+       </str>
        <str name="residents_pf">
+         residents_unstem_search^500000
+         residents_unstem_search^250000
+         residents_addl_unstem_search^100000
+         residents_t^50000
+       </str>
+       <str name="residents_qf">
          residents_unstem_search^500000
          residents_unstem_search^250000
          residents_addl_unstem_search^100000
@@ -600,7 +690,19 @@
          seeAlso_addl_unstem_search^100000
          seeAlso_t^50000
        </str>
+       <str name="seeAlso_qf">
+         seeAlso_unstem_search^500000
+         seeAlso_unstem_search^250000
+         seeAlso_addl_unstem_search^100000
+         seeAlso_t^50000
+       </str>
        <str name="second_marriage_pf">
+         second_marriage_unstem_search^500000
+         second_marriage_unstem_search^250000
+         second_marriage_addl_unstem_search^100000
+         second_marriage_t^50000
+       </str>
+       <str name="second_marriage_qf">
          second_marriage_unstem_search^500000
          second_marriage_unstem_search^250000
          second_marriage_addl_unstem_search^100000
@@ -612,13 +714,31 @@
          third_marriage_addl_unstem_search^100000
          third_marriage_t^50000
        </str>
+       <str name="third_marriage_qf">
+         third_marriage_unstem_search^500000
+         third_marriage_unstem_search^250000
+         third_marriage_addl_unstem_search^100000
+         third_marriage_t^50000
+       </str>
        <str name="unresidents_pf">
          unresidents_unstem_search^500000
          unresidents_unstem_search^250000
          unresidents_addl_unstem_search^100000
          unresidents_t^50000
        </str>
+       <str name="unresidents_qf">
+         unresidents_unstem_search^500000
+         unresidents_unstem_search^250000
+         unresidents_addl_unstem_search^100000
+         unresidents_t^50000
+       </str>
        <str name="unfamily_pf">
+         unfamily_unstem_search^500000
+         unfamily_unstem_search^250000
+         unfamily_addl_unstem_search^100000
+         unfamily_t^50000
+       </str>
+       <str name="unfamily_qf">
          unfamily_unstem_search^500000
          unfamily_unstem_search^250000
          unfamily_addl_unstem_search^100000
@@ -913,6 +1033,148 @@
       <str name="name">military_group</str>
       <str name="field">military_group_spell</str>
       <str name="spellcheckIndexDir">./spell_military_group</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    
+    <!-- biofile elements -->
+    <lst name="spellchecker">
+      <str name="name">baptism</str>
+      <str name="field">baptism_spell</str>
+      <str name="spellcheckIndexDir">./spell_baptism</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">sources</str>
+      <str name="field">sources_spell</str>
+      <str name="spellcheckIndexDir">./spell_sources</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">confirmation</str>
+      <str name="field">confirmation_spell</str>
+      <str name="spellcheckIndexDir">./spell_confirmation</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">death</str>
+      <str name="field">death_spell</str>
+      <str name="spellcheckIndexDir">./spell_death</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">ethnicity</str>
+      <str name="field">ethnicity_spell</str>
+      <str name="spellcheckIndexDir">./spell_ethnicity</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">family</str>
+      <str name="field">family_spell</str>
+      <str name="spellcheckIndexDir">./spell_family</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">marriage</str>
+      <str name="field">marriage_spell</str>
+      <str name="spellcheckIndexDir">./spell_marriage</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">name</str>
+      <str name="field">name_spell</str>
+      <str name="spellcheckIndexDir">./spell_name</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">notes</str>
+      <str name="field">notes_spell</str>
+      <str name="spellcheckIndexDir">./spell_notes</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">notes</str>
+      <str name="field">occupation_spell</str>
+      <str name="spellcheckIndexDir">./spell_occupation</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">notes</str>
+      <str name="field">notes_spell</str>
+      <str name="spellcheckIndexDir">./spell_notes</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">other</str>
+      <str name="field">other_spell</str>
+      <str name="spellcheckIndexDir">./spell_other</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">residents</str>
+      <str name="field">residents_spell</str>
+      <str name="spellcheckIndexDir">./spell_residents</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">seeAlso</str>
+      <str name="field">seeAlso_spell</str>
+      <str name="spellcheckIndexDir">./spell_seeAlso</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">residents</str>
+      <str name="field">residents_spell</str>
+      <str name="spellcheckIndexDir">./spell_residents</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">second_marriage</str>
+      <str name="field">second_marriage_spell</str>
+      <str name="spellcheckIndexDir">./spell_second_marriage</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">third_marriage</str>
+      <str name="field">third_marriage_spell</str>
+      <str name="spellcheckIndexDir">./spell_third_marriage</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">third_marriage</str>
+      <str name="field">third_marriage_spell</str>
+      <str name="spellcheckIndexDir">./spell_third_marriage</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">unresidents</str>
+      <str name="field">unresidents_spell</str>
+      <str name="spellcheckIndexDir">./unresidents_marriage</str>
+      <str name="accuracy">0.7</str>
+      <str name="buildOnOptimize">true</str>
+    </lst>
+    <lst name="spellchecker">
+      <str name="name">unfamily</str>
+      <str name="field">unfamily_spell</str>
+      <str name="spellcheckIndexDir">./unfamily_marriage</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>

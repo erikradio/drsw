@@ -16,3 +16,6 @@ secondMarriage
 thirdMarriage
 unresidents(?)
 unfamily
+
+
+http://localhost:3000/biofile?utf8=%E2%9C%93&search_field=name&q=abalos

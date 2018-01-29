@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'biofile/search'
 
   get 'masterfile/search'
@@ -27,12 +28,12 @@ Rails.application.routes.draw do
   # resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
   #   concerns :exportable
   # end
-
-  resources :solr_documents, only: [:show], path: '/masterfile', controller: 'masterfile' do
+  #
+  resources :solr_documents, only: [:show], path: 'masterfile', controller: 'masterfile' do
     concerns :exportable
   end
 
-  resources :solr_documents, only: [:show], path: '/biofile', controller: 'biofile' do
+  resources :solr_documents, only: [:show], path: 'biofile', controller: 'biofile' do
     concerns :exportable
   end
 
@@ -45,8 +46,9 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/masterfile/', to: 'masterfile#search', as: 'masterfile'
-  get '/catalog2/', to: 'biofile#search', as: 'biofile'
+
+  get '/catalog/masterfile/', to: 'masterfile#search', as: 'masterfile'
+  get '/catalog/biofile/', to: 'biofile#search', as: 'biofile'
 
   get '*path' => redirect('/')
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -145,41 +145,41 @@ class CatalogController < ApplicationController
 #     # solr fields to be displayed in the show (single result) view
 #     #   The ordering of the field names is the order of the display
 #
-    # config.add_show_field 'title_vern_display', label: 'Title'
-    # config.add_show_field 'subtitle_display', label: 'Subtitle'
-    # config.add_show_field 'subtitle_vern_display', label: 'Subtitle'
-    # config.add_show_field 'author_display', label: 'Author'
-    # config.add_show_field 'author_vern_display', label: 'Author'
-    # config.add_show_field 'format', label: 'Format'
-    # config.add_show_field 'url_fulltext_display', label: 'URL'
-    # config.add_show_field 'url_suppl_display', label: 'More Information'
-    # config.add_show_field 'language_facet', label: 'Language'
-    # config.add_show_field 'published_display', label: 'Published'
-    # config.add_show_field 'published_vern_display', label: 'Published'
-    # config.add_show_field 'lc_callnum_display', label: 'Call number'
-    # config.add_show_field 'isbn_t', label: 'ISBN'
-    config.add_show_field 'id', label: 'ID'
-    config.add_show_field 'title_display', label: 'Title'
-    config.add_show_field 'author_t', label: 'Author'
-    config.add_show_field 'date_t', label: 'Date'
-    config.add_show_field 'language_t', label: 'Language'
-
-    config.add_show_field 'documentation_t', label: 'Documentation'
-    config.add_show_field 'precis_t', label: 'Precis'
-    config.add_show_field 'people_t', label: 'People'
-    config.add_show_field 'place_t', label: 'Place'
-    config.add_show_field 'ethnic_group_t', label: 'Ethnic Group'
-    config.add_show_field 'first_location_t', label: 'First Location'
-    config.add_show_field 'original_location_t', label: 'Original Location'
-    config.add_show_field 'other_location_t', label: 'Other Location'
-    config.add_show_field 'keyword_t', label: 'Keyword'
-
-
-    config.add_show_field 'location_t', label: 'Location'
-    config.add_show_field 'note_t', label: 'Note'
-    config.add_show_field 'source_t', label: 'Source'
-
-    config.add_show_field 'military_group_t', label: 'Military Group'
+    # # config.add_show_field 'title_vern_display', label: 'Title'
+    # # config.add_show_field 'subtitle_display', label: 'Subtitle'
+    # # config.add_show_field 'subtitle_vern_display', label: 'Subtitle'
+    # # config.add_show_field 'author_display', label: 'Author'
+    # # config.add_show_field 'author_vern_display', label: 'Author'
+    # # config.add_show_field 'format', label: 'Format'
+    # # config.add_show_field 'url_fulltext_display', label: 'URL'
+    # # config.add_show_field 'url_suppl_display', label: 'More Information'
+    # # config.add_show_field 'language_facet', label: 'Language'
+    # # config.add_show_field 'published_display', label: 'Published'
+    # # config.add_show_field 'published_vern_display', label: 'Published'
+    # # config.add_show_field 'lc_callnum_display', label: 'Call number'
+    # # config.add_show_field 'isbn_t', label: 'ISBN'
+    # config.add_show_field 'id', label: 'ID'
+    # config.add_show_field 'title_display', label: 'Title'
+    # config.add_show_field 'author_t', label: 'Author'
+    # config.add_show_field 'date_t', label: 'Date'
+    # config.add_show_field 'language_t', label: 'Language'
+    #
+    # config.add_show_field 'documentation_t', label: 'Documentation'
+    # config.add_show_field 'precis_t', label: 'Precis'
+    # config.add_show_field 'people_t', label: 'People'
+    # config.add_show_field 'place_t', label: 'Place'
+    # config.add_show_field 'ethnic_group_t', label: 'Ethnic Group'
+    # config.add_show_field 'first_location_t', label: 'First Location'
+    # config.add_show_field 'original_location_t', label: 'Original Location'
+    # config.add_show_field 'other_location_t', label: 'Other Location'
+    # config.add_show_field 'keyword_t', label: 'Keyword'
+    #
+    #
+    # config.add_show_field 'location_t', label: 'Location'
+    # config.add_show_field 'note_t', label: 'Note'
+    # config.add_show_field 'source_t', label: 'Source'
+    #
+    # config.add_show_field 'military_group_t', label: 'Military Group'
 #
 #
 #     # "fielded" search configuration. Used by pulldown among other places.
